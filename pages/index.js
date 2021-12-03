@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -13,8 +14,12 @@ export default function Home() {
 
       <nav className={styles.nav}>
         <div className={styles.navList}>
-          <a href="/">Home<span><Image src="/home-icon.svg" width={20} height={20}/></span></a>
+          <Link href="/">
+          <a>Home<span><Image src="/home-icon.svg" width={20} height={20}/></span></a>
+          </Link>
+          <Link>
           <a>asdasdsaasdas</a>
+          </Link>
         </div>
       </nav>
       <main className={styles.main}>
