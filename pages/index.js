@@ -14,7 +14,7 @@ export default function Home() {
 
       <nav className={styles.nav}>
         <div className={styles.navList}>
-          <Link href="/">
+          <Link href="./">
           <a>Home<span><Image src="/home-icon.svg" width={20} height={20}/></span></a>
           </Link>
           <Link>
