@@ -17,7 +17,7 @@ export default function Home() {
           <Link href="./">
           <a>Home<span><Image src="/home-icon.svg" width={20} height={20}/></span></a>
           </Link>
-          <Link>
+          <Link href="./">
           <a>asdasdsaasdas</a>
           </Link>
         </div>
