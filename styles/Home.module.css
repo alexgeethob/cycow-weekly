@@ -10,7 +10,7 @@
 }
 
 .navList{
-  margin: 10px;
+  margin: 8px;
   padding: 8px;
   align-items: center;
 }
@@ -18,16 +18,14 @@
 .navList a{
   border-radius: 5px;
   display: flex;
-  float: left;
-  margin-bottom: 10px;
+  float: right;
+  margin-bottom: 12px;
   padding: 8px;
   text-align: center;
 }
 
-.navList a:hover,
-.navList a:focus,
-.navList a:active{
-  background-color: rgb(241, 175, 33);
+.navList a:hover{
+  background-color: rgb(226, 165, 33);
 }
 
 .main {
@@ -61,9 +59,7 @@
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
+.title a:hover {
   text-decoration: underline;
 }
 
@@ -84,9 +80,7 @@
   transition: background-size 0.6s ease-in-out, color 0.5s ease;
 }
 
-.title:hover,
-.title:focus,
-.title:active{
+.title:hover{
   background-size: 100% 5px;
   color: #000000;
 }
@@ -151,8 +145,18 @@
 }
 
 .logo {
-  height: 1em;
+  height: 1em; 
   margin-left: 0.5rem;
+}
+
+.info{
+  border-radius: 8px 12px 8px 12px;
+  border: rgb(180, 180, 180);
+  border-width: 3px;
+  background-image: linear-gradient(60deg, #808080, #e2e2e2);
+  border-style:solid;
+  margin: 10px;
+  padding: 8px;
 }
 
 @media (max-width: 600px) {

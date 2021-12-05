@@ -3,11 +3,11 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>CyCow Weekly</title>
+        <title>About Us</title>
         <meta name="description" content="Not sponsored (yet)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -24,19 +24,23 @@ export default function Home() {
       </nav>
       <main className={styles.main}>
         <h1 className={styles.title}>
-            idk title yet 
+            About Us 
         </h1>
 
         <p className={styles.description}>
           Weekly beginner-friendly cybersecurity challenges!
         </p>
 
-        <div className={styles.grid}>
-          <a href="/about" className={styles.card}>
-            <h2 className={styles.card.h2}>Learn More &rarr;</h2>
-            <p> yes</p>
-          </a>
-        </div>
+        
+        <p className={styles.info}>
+            we do random stuff lets go {"\n"}
+            also yeah  auohaohoghaoc
+            aidbbh
+            aouvhouebhabboajbpijan {"\n"}
+            aoinjeoinjeoianjoienjoinjoaidjnvao jboiasjb
+            v av d {"\n"}
+            vs
+        </p>
       </main> 
       <footer className={styles.footer}>
         <a
