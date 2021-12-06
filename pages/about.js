@@ -9,7 +9,7 @@ export default function About() {
       <Head>
         <title>About Us</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
 
       <nav className={styles.nav}>
@@ -33,13 +33,12 @@ export default function About() {
 
         
         <p className={styles.info}>
-            we do random stuff lets go {"\n"}
-            also yeah  auohaohoghaoc
-            aidbbh
-            aouvhouebhabboajbpijan {"\n"}
-            aoinjeoinjeoianjoienjoinjoaidjnvao jboiasjb
-            v av d {"\n"}
-            vs
+            we do random stuff lets go 
+            vsfh08ijb0sjabiojba
+            abijoibjijnb
+            noitjnwo[jmrt09omj9
+            beqibj0ebj0qb9jer09bie0-9bie0-9bike9-0bi-e09qbio-0e9ocqwpefd
+            ] egggegegegegeg
         </p>
       </main> 
       <footer className={styles.footer}>

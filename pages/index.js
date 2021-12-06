@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>CyCow Weekly</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
 
       <nav className={styles.nav}>
@@ -32,10 +32,12 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/about" className={styles.card}>
-            <h2 className={styles.card.h2}>Learn More &rarr;</h2>
-            <p> yes</p>
-          </a>
+          <Link href="/about">
+            <a className={styles.card}>
+              <h2 className={styles.card.h2}>Learn More &rarr;</h2>
+              <p> yes</p>
+            </a>
+          </Link>
         </div>
       </main> 
       <footer className={styles.footer}>
