@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '/styles/Chal.module.css'
 import Link from 'next/link'
 
 export default function About() {
@@ -22,25 +22,20 @@ export default function About() {
           </Link>
         </div>
       </nav>
+      
       <main className={styles.main}>
         <h1 className={styles.title}>
-            About Us 
+            Dots and Dashes 
         </h1>
 
         <p className={styles.description}>
           Weekly beginner-friendly cybersecurity challenges!
         </p>
 
-        
-        <p className={styles.info}>
-            we do random stuff lets go {"\n"}
-            also yeah  auohaohoghaoc
-            aidbbh
-            aouvhouebhabboajbpijan {"\n"}
-            aoinjeoinjeoianjoienjoinjoaidjnvao jboiasjb
-            v av d {"\n"}
-            vs
-        </p>
+        <code>
+          ..-.-.-.--.-.-.-.-..-...--.--..-
+        </code>
+
       </main> 
       <footer className={styles.footer}>
         <a
