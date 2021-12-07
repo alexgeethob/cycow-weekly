@@ -1,5 +1,5 @@
 .container{
-  background-color: beige;
+  min-height: 100vh;
 }
 .nav{
   background-color: rgb(255, 222, 38);
@@ -19,40 +19,13 @@
   border-radius: 0.2rem;
   display: flex;
   float: right;
-  margin: 0.2rem;
+  margin: 0.5rem;
   padding: 0.4rem;
   text-align: center;
 }
 
-.navList a:hover, .navList .navBtn:hover{
+.navList a:hover{
   background-color: rgb(212, 168, 23);
-}
-
-.navList .navBtn{
-  border-radius: 0.3rem;
-  border: none;
-  outline: none;
-  display: flex;
-  font-family: inherit;
-  float: right;
-  margin: 0.2rem;
-  padding: 0.4rem;
-  text-align: center;
-  background-color: inherit;
-  font-size: 16px;
-}
-
-.navList .navBtnContent{
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.navBtn:hover .navList .navBtnContent{
-  display: grid;
 }
 
 .main {
@@ -71,6 +44,7 @@
   font-size: 4rem;
 }
 
+
 .title{
   background-image: linear-gradient(35deg, #ff285d, #0b27a7);
   background-position: bottom;
@@ -79,6 +53,10 @@
   border-radius: 10px;
   color: #242424;
   transition: background-size 0.6s ease-in-out, color 0.5s ease;
+  opacity: 0;
+  transform: translateY(-60%);
+  animation: fadeIn 1.3s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .title:hover{
@@ -91,10 +69,18 @@
   text-align: center;
 }
 
+@keyframes fadeIn {
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .subtitle{
-  margin: 2rem;
+  margin: 1.5rem;
   font-size: larger;
   font-weight: bold;
+  text-align: center;
 }
 
 .description {
@@ -104,7 +90,6 @@
 }
 
 .code {
-  background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -131,7 +116,8 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: all 0.6s ease;
-  max-width: 300px;
+  max-width: 320px;
+  min-height: 10rem;
 }
 
 .card:hover{
@@ -143,12 +129,12 @@
 
 .card h2 {
   margin: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -183,4 +169,10 @@
 
 .body a{
   color: #004df3;
+
+}
+
+.important{
+  font-weight: bolder;
+  font-size: larger;
 }

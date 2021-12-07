@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>CyCow Weekly</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/logo.ico" />
+        <link rel="icon" href="/wo.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -21,36 +21,49 @@ export default function Home() {
         </p>
         <nav className={styles.nav}>
         <div className={styles.navList}>
-          <Link href="/">
-          <a>Home<span><Image alt="" src="/home-icon.svg" width={20} height={20}/></span></a>
-          </Link>
-          <Link href="/about">
-          <a>About</a>
-          </Link>
-        </div>
+            <Link href="/">
+              <a>
+                Home
+                <Image alt="" src="/home-icon.svg" width={20} height={20} />
+              </a>
+            </Link>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+            <Link href="/guide">
+              <a>Guide</a>
+            </Link>
+            <Link href="/challenges">
+              <a>Challenges</a>
+            </Link>
+          </div>
       </nav>
         <div className={styles.grid}>
           <Link href="/about">
             <a className={styles.card}>
-              <h2 className={styles.card.h2}>About This Site &rarr;</h2>
+              <h2>About This Site</h2>
               <p>Find out more about this site and how it was created</p>
             </a>
           </Link>
           <Link href="/guide">
             <a className={styles.card}>
-              <h2 className={styles.card.h2}>Quick Guide &rarr;</h2>
-              <p>Get a quick guide into cyber security and a few basics</p>
+              <h2>Quick Guide &rarr;</h2>
+              <p>Get a quick guide into cybersecurity and a few other basics</p>
             </a>
           </Link>
-          <Link href="/challenges/chal1">
+          <Link href="/challenges">
             <a className={styles.card}>
-              <h2 className={styles.card.h2}>Get Started &rarr;</h2>
-              <p>Try out a beginner-friendly cryptography challenge</p>
+              <h2 >Get Started &rarr;</h2>
+              <p>Try out a challenge now!</p>
             </a>
           </Link>
             <a href="https://github.com/alexgeethob/cycow-weekly" className={styles.card}>
-              <h2 className={styles.card.h2}>Source Code &rarr;</h2>
-              <p>This website is fully uploaded online!</p>
+              <h2>Source Code &rarr;</h2>
+              <p>This website is fully uploaded online</p>
+            </a>
+            <a href="https://github.com/alexgeethob" className={styles.card}>
+              <h2>Other Projects &rarr;</h2>
+              <p>Shameless plug :P</p>
             </a>
         </div>
       </main> 

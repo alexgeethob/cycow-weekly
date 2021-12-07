@@ -1,54 +1,48 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '/styles/Chal.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "/styles/Chal.module.css";
+import Link from "next/link";
 
-export default function About() {
+export default function c1() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>About Us</title>
+        <title>Challenge 1: Dots and Dashes</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/o.ico" />
       </Head>
 
-      <nav className={styles.nav}>
-        <div className={styles.navList}>
-          <Link href="/">
-          <a>Home<span><Image src="/home-icon.svg" width={20} height={20}/></span></a>
-          </Link>
-          <Link href="/about">
-          <a>asdasdsaasdas</a>
-          </Link>
-        </div>
-      </nav>
-      
       <main className={styles.main}>
-        <h1 className={styles.title}>
-            Dots and Dashes 
-        </h1>
-
-        <p className={styles.description}>
-          Weekly beginner-friendly cybersecurity challenges!
-        </p>
-
-        <code>
-          ..-.-.-.--.-.-.-.-..-...--.--..-
-        </code>
-
-      </main> 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <nav className={styles.nav}>
+          <div className={styles.navList}>
+            <Link href="/">
+              <a>
+                Home
+                <Image alt="" src="/home-icon.svg" width={20} height={20} />
+              </a>
+            </Link>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+            <Link href="/guide">
+              <a>Guide</a>
+            </Link>
+            <Link href="/challenges">
+              <a>Challenges</a>
+            </Link>
+          </div>
+        </nav>
+        <h1 className={styles.title}>Challenge 1: Dots and Dashes</h1>
+        <p className={styles.body}>Even back before computers existed, information was still being encrypted and decrypted.
+        <br />
+        See if you can decode the message from this famous form of message encoding.</p>
+        <code className={styles.code}>-.-. -.-. .--  .-.. . ..-. -  -... .-. .- -.-. .  .-- ...--
+         .-.. -.-. ----- -- . ..--.- - ----- ..--.- -.-. -.-- -.... . .-. ..--.- -.-. ----- .-- 
+         ..--.- .-- ...-- ...-- -.- .---- -.-- -.-.--  .-. .. --. .... -  -... .-. .- -.-. .  </code>
+      </main>
+      <footer>
+        <a href="mailto:alexzhang05@gmail.com">Contact</a>
       </footer>
     </div>
-  )
+  );
 }
