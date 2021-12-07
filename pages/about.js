@@ -4,8 +4,8 @@ import styles from "/styles/Home.module.css";
 import Link from "next/link";
 import Next from "/public/sample/next.png";
 import Node from "/public/sample/node.png";
-import Code1 from "/public/sample/card.png";
-import Code2 from "/public/sample/underline.png";
+import Code1 from "/public/sample/card.PNG";
+import Code2 from "/public/sample/underline.PNG";
 
 export default function About() {
   return (
