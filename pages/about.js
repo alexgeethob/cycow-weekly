@@ -2,6 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
+import Next from "/public/sample/next.png";
+import Node from "/public/sample/node.png";
+import Code1 from "/public/sample/card.png";
+import Code2 from "/public/sample/underline.png";
 
 export default function About() {
   return (
@@ -54,16 +58,30 @@ export default function About() {
           infrastructure were a huge problem. There was nowhere to host the
           challenges, and online services like CTFd cost too much for me.
         </p>
-        <h2 className={styles.subtitle}> Current Compromise </h2>
+        <h2 className={styles.subtitle}> Current Compromise </h2> 
+        <div className={styles.picGroup}>
+          <Image src={Next} alt="NextJS logo" className={styles.pic} height={120} width={200}></Image>
+          <Image src={Node} alt="NodeJS logo"
+          height={120} width={200} className={styles.pic}></Image>
+        </div>
         <p className={styles.body}>
           Thankfully, I learned about{" "}
           <a href="https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website">
             Vercel&apos;s{" "}
           </a>
-          free hosting option with NextJS repositories{" "}
+          NextJS, which runs on NodeJS and React,{" "}
           <span style={{ fontSize: "2px" }}>thanks Akaash</span>
           and managed to use that to create this site that you are currently
-          viewing. However, for now, there is no dynamic content on the site.
+          viewing. 
+          <br />
+          <div className={styles.picGroup}>
+          <Image src={Code1} alt="CSS code for cards on main page"
+          height={270} width={400} className={styles.pic}></Image>
+          <Image src={Code2} alt="CSS code for underline on title"
+          height={240} width={390} className={styles.pic}></Image>
+          </div>
+          <br />
+          However, for now, there is no dynamic content on the site.
           Everything on this site is loaded statically and there isn&apos;t much user
           interaction. Also, do note that this website is currently only built for Chrome/Chromium browsers
           and ideally a 16:9 resolution.

@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>CyCow Weekly</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/wo.ico" />
+        <link rel="icon" href="/o.ico" />
       </Head>
 
       <main className={styles.main}>
