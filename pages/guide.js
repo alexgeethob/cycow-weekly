@@ -40,7 +40,7 @@ export default function Guide() {
          (IT security) is the protection of computer systems and networks from information disclosure, 
          theft of or damage to their hardware, software, or electronic data, as well as from the disruption
           or misdirection of the services they provide. It is becoming increasingly significant due
-           to the continuously expanding reliance on computer systems and the growth of "smart" devices, including smartphones,
+           to the continuously expanding reliance on computer systems and the growth of smart devices, including smartphones,
              televisions, and the various devices that constitute the Internet.</p>
         <h2 className={styles.subtitle}>Challenges</h2>
         <p className={styles.body}>Find out more about the challenges hosted on this site{' '}<Link href="/challenges">

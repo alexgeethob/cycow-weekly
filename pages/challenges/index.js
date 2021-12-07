@@ -40,7 +40,7 @@ export default function ChalHome() {
         even need to be recreated. However, the flag will always be a string. </p>
         <p className={styles.important}>IMPORTANT NOTE: The flag is always wrapped with <code className={styles.code}>ccw{'{}'}</code> </p>
         <p className={styles.body}>
-        Usually, the text is in the flag is leetspeak, and should be humanly-readable. Don't be afraid to reach out
+        Usually, the text is in the flag is leetspeak, and should be humanly-readable. Don&apos;t be afraid to reach out
         if you are unable to solve a challenge or need hints!
         </p>
         <h2 className={styles.subtitle}>Challenge List</h2>

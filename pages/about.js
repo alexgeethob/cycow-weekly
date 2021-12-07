@@ -64,7 +64,7 @@ export default function About() {
           <span style={{ fontSize: "2px" }}>thanks Akaash</span>
           and managed to use that to create this site that you are currently
           viewing. However, for now, there is no dynamic content on the site.
-          Everything on this site is loaded statically and there isn't much user
+          Everything on this site is loaded statically and there isn&apos;t much user
           interaction. Also, do note that this website is currently only built for Chrome/Chromium browsers
           and ideally a 16:9 resolution.
         </p>
