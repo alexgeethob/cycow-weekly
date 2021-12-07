@@ -8,12 +8,13 @@ body {
 
 footer{
   background-color: lightblue;
-  position: absolute;
+  position: relative;
   width: 100%;
+  min-height: 1.5rem;
   bottom: 0%;
   display: flex;
   flex: 1;
-  padding: 2rem 0;
+  padding: 0.75rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;

@@ -16,6 +16,9 @@ export default function Home() {
         <h1 className={styles.title}>
             Cyber Cow Weekly
         </h1>
+        <p className={styles.description}>
+          Weekly beginner-friendly cybersecurity challenges!
+        </p>
         <nav className={styles.nav}>
         <div className={styles.navList}>
           <Link href="/">
@@ -26,10 +29,6 @@ export default function Home() {
           </Link>
         </div>
       </nav>
-        <p className={styles.description}>
-          Weekly beginner-friendly cybersecurity challenges!
-        </p>
-
         <div className={styles.grid}>
           <Link href="/about">
             <a className={styles.card}>

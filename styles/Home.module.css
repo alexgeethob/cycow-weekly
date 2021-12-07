@@ -1,31 +1,58 @@
-
+.container{
+  background-color: beige;
+}
 .nav{
   background-color: rgb(255, 222, 38);
   float: left;
   position: sticky;
   width: 100%;
   top: 0%;
-  margin:0;
+  margin: 1.5rem;
 }
 
 .navList{
-  margin: 0.4rem;
-  padding: 0.4rem;
   justify-content: center;
   align-items: center;
 }
 
 .navList a{
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   display: flex;
   float: right;
-  margin-bottom: 0.6rem;
+  margin: 0.2rem;
   padding: 0.4rem;
   text-align: center;
 }
 
-.navList a:hover{
-  background-color: rgb(226, 165, 33);
+.navList a:hover, .navList .navBtn:hover{
+  background-color: rgb(212, 168, 23);
+}
+
+.navList .navBtn{
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  display: flex;
+  font-family: inherit;
+  float: right;
+  margin: 0.2rem;
+  padding: 0.4rem;
+  text-align: center;
+  background-color: inherit;
+  font-size: 16px;
+}
+
+.navList .navBtnContent{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navBtn:hover .navList .navBtnContent{
+  display: grid;
 }
 
 .main {
@@ -37,17 +64,9 @@
   align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover {
-  text-decoration: underline;
-}
-
 .title {
   margin: 1rem;
+  padding: 0.5rem;
   line-height: 1.15;
   font-size: 4rem;
 }
@@ -72,8 +91,14 @@
   text-align: center;
 }
 
+.subtitle{
+  margin: 2rem;
+  font-size: larger;
+  font-weight: bold;
+}
+
 .description {
-  margin: 4rem 0;
+  margin: 1.5rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -96,6 +121,8 @@
 }
 
 .card {
+  background-color: white;
+  box-shadow: 0px 5px 3px -5px rgba(0,0,0,0.5);
   margin: 1rem;
   padding: 1rem;
   text-align: left;
@@ -103,11 +130,12 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: all 1s ease;
+  transition: all 0.6s ease;
   max-width: 300px;
 }
 
 .card:hover{
+  box-shadow: 0px 10px 6px -5px rgba(0,0,0,0.5);
   color: #004df3;
   border-color: #004df3;
   transform: scale(1.2);
@@ -140,9 +168,19 @@
   max-width: 30ch;
 }
 
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+}
+
+.body{
+  max-width: 100ch;
+  line-height: 2rem;
+}
+
+.body a{
+  color: #004df3;
 }
