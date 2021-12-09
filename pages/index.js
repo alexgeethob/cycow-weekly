@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '/styles/Home.module.css';
-import Link from 'next/link';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "/styles/Home.module.css";
+import Link from "next/link";
 
-export function Nav(){
+export function Nav() {
   return (
-  <nav className={styles.nav}>
+    <nav className={styles.nav}>
       <div className={styles.navList}>
         <Link href="/">
           <a>
@@ -23,20 +23,72 @@ export function Nav(){
           <a>Challenges</a>
         </Link>
       </div>
-  </nav>
+    </nav>
   );
 }
 
-export function Footer(){
+export function Footer() {
   return (
     <footer>
-        <a href="mailto:alexzhang05@gmail.com">
-            Contact
-        </a>
-      </footer>
+      <a href="mailto:alexzhang05@gmail.com">Contact</a>
+    </footer>
   );
 }
 
+export function Title(props) {
+  return (
+    <header>
+      <h1 className={styles.title}>{props.title}</h1>
+      <p className={styles.description}>{props.subtitle}</p>
+    </header>
+  );
+}
+
+export function Card(props) {
+  return (
+    <a href={props.link} className={styles.card} target="_blank">
+      <h2>{props.name}</h2>
+      <p>{props.message}</p>
+    </a>
+  );
+}
+
+export function LinkCard(props) {
+  return (
+    <Link href={props.link}>
+      <a className={styles.card}>
+        <h2>{props.name}</h2>
+        <p>{props.message}</p>
+      </a>
+    </Link>
+  );
+}
+
+export function Grid(props) {
+  return <div className={styles.grid}>{props.children}</div>;
+}
+
+export function Section(props) {
+  return (
+    <>
+      <SectionTitle title={props.title}></SectionTitle>
+      <SectionText text={props.text}>{props.children}</SectionText>
+    </>
+  );
+}
+
+export function SectionTitle(props) {
+  return <h2 className={styles.subtitle}>{props.title}</h2>;
+}
+
+export function SectionText(props) {
+  return (
+    <p className={styles.body}>
+      {props.text}
+      {props.children}
+    </p>
+  );
+}
 
 export default function Home() {
   return (
@@ -48,43 +100,42 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-            Cyber Cow Weekly
-        </h1>
-        <p className={styles.description}>
-          Weekly beginner-friendly cybersecurity challenges!
-        </p>
+        <Title
+          title="Cyber Cow Weekly"
+          subtitle="Weekly beginner-friendly cybersecurity challenges!"
+        >
+          {" "}
+        </Title>
         <Nav></Nav>
-        <div className={styles.grid}>
-          <Link href="/about">
-            <a className={styles.card}>
-              <h2>About This Site</h2>
-              <p>Find out more about this site and how it was created</p>
-            </a>
-          </Link>
-          <Link href="/guide">
-            <a className={styles.card}>
-              <h2>Quick Guide &rarr;</h2>
-              <p>Get a quick guide into cybersecurity and a few other basics</p>
-            </a>
-          </Link>
-          <Link href="/challenges">
-            <a className={styles.card}>
-              <h2 >Get Started &rarr;</h2>
-              <p>Try out a challenge now!</p>
-            </a>
-          </Link>
-            <a href="https://github.com/alexgeethob/cycow-weekly" className={styles.card}>
-              <h2>Source Code &rarr;</h2>
-              <p>This website is fully uploaded online</p>
-            </a>
-            <a href="https://github.com/alexgeethob" className={styles.card}>
-              <h2>Other Projects &rarr;</h2>
-              <p>Shameless plug :P</p>
-            </a>
-        </div>
-      </main> 
+        <Grid>
+          <LinkCard
+            name="About This Site"
+            message="Find out more about this site and how it was created"
+            link="/about"
+          ></LinkCard>
+          <LinkCard
+            name="Quick Guide &rarr;"
+            message="Get a quick guide into cybersecurity and a few other basics"
+            link="/guide"
+          ></LinkCard>
+          <LinkCard
+            name="Get Started &rarr;"
+            message="Try out a challenge now!"
+            link="/challenges"
+          ></LinkCard>
+          <Card
+            name="Source Code &rarr;"
+            message="This website is fully uploaded online"
+            link="https://github.com/alexgeethob/cycow-weekly"
+          ></Card>
+          <Card
+            name="Other Projects &rarr;"
+            message="Some of my other projects"
+            link="https://github.com/alexgeethob"
+          ></Card>
+        </Grid>
+      </main>
       <Footer></Footer>
     </div>
-  )
+  );
 }

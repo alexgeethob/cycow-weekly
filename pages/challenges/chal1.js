@@ -33,12 +33,19 @@ export default function c1() {
           </div>
         </nav>
         <h1 className={styles.title}>Challenge 1: Dots and Dashes</h1>
-        <p className={styles.body}>Even back before computers existed, information was still being encrypted and decrypted.
-        <br />
-        See if you can decode the message from this famous form of message encoding.</p>
-        <code className={styles.code}>-.-. -.-. .--  .-.. . ..-. -  -... .-. .- -.-. .  .-- ...--
-         .-.. -.-. ----- -- . ..--.- - ----- ..--.- -.-. -.-- -.... . .-. ..--.- -.-. ----- .-- 
-         ..--.- .-- ...-- ...-- -.- .---- -.-- -.-.--  .-. .. --. .... -  -... .-. .- -.-. .  </code>
+        <p className={styles.body}>
+          Even back before computers existed, information was still being
+          encrypted and decrypted.
+          <br />
+          See if you can decode the message from this famous form of message
+          encoding.
+        </p>
+        <code className={styles.code}>
+          -.-. -.-. .-- .-.. . ..-. - -... .-. .- -.-. . .-- ...-- .-.. -.-.
+          ----- -- . ..--.- - ----- ..--.- -.-. -.-- -.... . .-. ..--.- -.-.
+          ----- .-- ..--.- .-- ...-- ...-- -.- .---- -.-- -.-.-- .-. .. --. ....
+          - -... .-. .- -.-. .{" "}
+        </code>
       </main>
       <footer>
         <a href="mailto:alexzhang05@gmail.com">Contact</a>
