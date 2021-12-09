@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
+import {Nav, Footer} from "/pages/index";
 
 export default function Guide() {
   return (
@@ -16,25 +17,7 @@ export default function Guide() {
         <header>
           <h1 className={styles.title}>Quick Guide to Cybersecurity</h1>
         </header>
-        <nav className={styles.nav}>
-          <div className={styles.navList}>
-            <Link href="/">
-              <a>
-                Home
-                <Image alt="" src="/home-icon.svg" width={20} height={20} />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <Link href="/guide">
-              <a>Guide</a>
-            </Link>
-            <Link href="/challenges">
-              <a>Challenges</a>
-            </Link>
-          </div>
-        </nav>
+        <Nav></Nav>
         <h2 className={styles.subtitle}>Overview</h2>
         <p className={styles.body}>Computer security, cybersecurity, or information technology security
          (IT security) is the protection of computer systems and networks from information disclosure, 
@@ -79,9 +62,7 @@ export default function Guide() {
         <p className={styles.body}>Cybersecurity is still a very wide and vast field, and there are defintely more topics than those listed head,
         such as networking. Many miscellaneous challenges will be listed under this category. </p>
       </main>
-      <footer>
-        <a href="mailto:alexzhang05@gmail.com">Contact</a>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }

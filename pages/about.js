@@ -6,6 +6,8 @@ import Next from "/public/sample/next.png";
 import Node from "/public/sample/node.png";
 import Code1 from "/public/sample/card.PNG";
 import Code2 from "/public/sample/underline.PNG";
+import { Nav, Footer, Title } from "/pages/index";
+import { Section, SectionText, SectionTitle } from "/pages/index";
 
 export default function About() {
   return (
@@ -17,30 +19,9 @@ export default function About() {
       </Head>
 
       <main className={styles.main}>
-        <header>
-          <h1 className={styles.title}>About</h1>
-        </header>
-        <nav className={styles.nav}>
-          <div className={styles.navList}>
-            <Link href="/">
-              <a>
-                Home
-                <Image alt="" src="/home-icon.svg" width={20} height={20} />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <Link href="/guide">
-              <a>Guide</a>
-            </Link>
-            <Link href="/challenges">
-              <a>Challenges</a>
-            </Link>
-          </div>
-        </nav>
-        <h2 className={styles.subtitle}>Overall Goal</h2>
-        <p className={styles.body}>
+        <Title title="About"> </Title>
+        <Nav></Nav>
+        <Section title="Overall Goal">
           <Link href="/" className="link">
             Cyber Cow Weekly
           </Link>{" "}
@@ -57,42 +38,65 @@ export default function About() {
           Originally, CCW was planned to be a one-time CTF, but both design and
           infrastructure were a huge problem. There was nowhere to host the
           challenges, and online services like CTFd cost too much for me.
-        </p>
-        <h2 className={styles.subtitle}> Current Compromise </h2> 
-        <div className={styles.picGroup}>
-          <Image src={Next} alt="NextJS logo" className={styles.pic} height={120} width={200}></Image>
-          <Image src={Node} alt="NodeJS logo"
-          height={120} width={200} className={styles.pic}></Image>
-        </div>
-        <p className={styles.body}>
+        </Section>
+        <Section title="Current Compromises">
+          <div className={styles.picGroup}>
+            <Image
+              src={Next}
+              alt="NextJS logo"
+              className={styles.pic}
+              height={120}
+              width={200}
+            ></Image>
+            <Image
+              src={Node}
+              alt="NodeJS logo"
+              height={120}
+              width={200}
+              className={styles.pic}
+            ></Image>
+          </div>
           Thankfully, I learned about{" "}
-          <a href="https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website">
+          <a
+            target="_blank"
+            href="https://vercel.com/home"
+          >
             Vercel&apos;s{" "}
           </a>
           NextJS, which runs on NodeJS and React,{" "}
-          <span style={{ fontSize: "2px" }}>thanks Akaash</span>
+          <span style={{ fontSize: "1px" }}>thanks Akaash</span>
           and managed to use that to create this site that you are currently
-          viewing. 
+          viewing.
           <br />
           <div className={styles.picGroup}>
-          <Image src={Code1} alt="CSS code for cards on main page"
-          height={270} width={400} className={styles.pic}></Image>
-          <Image src={Code2} alt="CSS code for underline on title"
-          height={240} width={390} className={styles.pic}></Image>
+            <Image
+              src={Code1}
+              alt="CSS code for cards on main page"
+              height={270}
+              width={400}
+              className={styles.pic}
+            ></Image>
+            <Image
+              src={Code2}
+              alt="CSS code for underline on title"
+              height={240}
+              width={390}
+              className={styles.pic}
+            ></Image>
           </div>
           <br />
-          However, for now, there is no dynamic content on the site.
-          Everything on this site is loaded statically and there isn&apos;t much user
-          interaction. Also, do note that this website is currently only built for Chrome/Chromium browsers
-          and ideally a 16:9 resolution.
-        </p>
-        <h2 className={styles.subtitle}>Future Goals</h2>
-        <p className={styles.body}>
-          In the future, I plan to eventually convert everything to typescript
+          However, for now, there is no dynamic content on the site. Everything
+          on this site is loaded statically and there isn&apos;t much user
+          interaction. Also, do note that this website is currently only built
+          for Chrome/Chromium browsers and ideally a 16:9 resolution.
+        </Section>
+        <Section
+          title="Future Goals"
+          text="In the future, I plan to eventually convert everything to typescript
           (currently on js), add user input and verification, add api
           accessibility to get challenges, and maybe eventually add an account
-          system using a backend like Firebase.
-        </p>
+          system using a backend like Firebase."
+        ></Section>
         <Image
           alt="Picture of cow"
           src="/cow.ico"
@@ -100,9 +104,7 @@ export default function About() {
           width={30}
         ></Image>
       </main>
-      <footer>
-        <a href="mailto:alexzhang05@gmail.com">Contact</a>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }

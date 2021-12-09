@@ -1,7 +1,42 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '/styles/Home.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '/styles/Home.module.css';
+import Link from 'next/link';
+
+export function Nav(){
+  return (
+  <nav className={styles.nav}>
+      <div className={styles.navList}>
+        <Link href="/">
+          <a>
+            Home
+            <Image alt="" src="/home-icon.svg" width={20} height={20} />
+          </a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="/guide">
+          <a>Guide</a>
+        </Link>
+        <Link href="/challenges">
+          <a>Challenges</a>
+        </Link>
+      </div>
+  </nav>
+  );
+}
+
+export function Footer(){
+  return (
+    <footer>
+        <a href="mailto:alexzhang05@gmail.com">
+            Contact
+        </a>
+      </footer>
+  );
+}
+
 
 export default function Home() {
   return (
@@ -19,25 +54,7 @@ export default function Home() {
         <p className={styles.description}>
           Weekly beginner-friendly cybersecurity challenges!
         </p>
-        <nav className={styles.nav}>
-        <div className={styles.navList}>
-            <Link href="/">
-              <a>
-                Home
-                <Image alt="" src="/home-icon.svg" width={20} height={20} />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <Link href="/guide">
-              <a>Guide</a>
-            </Link>
-            <Link href="/challenges">
-              <a>Challenges</a>
-            </Link>
-          </div>
-      </nav>
+        <Nav></Nav>
         <div className={styles.grid}>
           <Link href="/about">
             <a className={styles.card}>
@@ -67,16 +84,7 @@ export default function Home() {
             </a>
         </div>
       </main> 
-      <footer>
-        <a href="mailto:alexzhang05@gmail.com">
-            Contact
-        </a>
-      </footer>
+      <Footer></Footer>
     </div>
   )
-}
-
-function e(){
-  var s = process.env.FLAG_1;
-  console.log(s);
 }
