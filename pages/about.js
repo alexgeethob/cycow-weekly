@@ -59,6 +59,7 @@ export default function About() {
           Thankfully, I learned about{" "}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://vercel.com/home"
           >
             Vercel&apos;s{" "}

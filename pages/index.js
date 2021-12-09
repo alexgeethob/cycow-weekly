@@ -46,7 +46,7 @@ export function Title(props) {
 
 export function Card(props) {
   return (
-    <a href={props.link} className={styles.card} target="_blank">
+    <a href={props.link} className={styles.card} target="_blank" rel="noopener noreferrer">
       <h2>{props.name}</h2>
       <p>{props.message}</p>
     </a>
