@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 import { Nav, Footer, Title } from "/pages/index";
-import {Section} from "/pages/index";
+import {Section, SectionText, SectionTitle} from "/pages/index";
 
 
 export function Important(props) {

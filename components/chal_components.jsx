@@ -20,7 +20,7 @@ export class FlagForm extends React.Component {
     }
   
     handleSubmit(event) {
-      alert("A flag was submitted: " + this.state.value);
+      alert("Flag Submission still WIP. " + this.state.value);
       event.preventDefault();
     }
   

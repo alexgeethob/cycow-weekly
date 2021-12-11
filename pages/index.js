@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 
+
+
 export function Nav() {
   return (
     <nav className={styles.nav}>
@@ -83,10 +85,10 @@ export function SectionTitle(props) {
 
 export function SectionText(props) {
   return (
-    <p className={styles.body}>
+    <span className={styles.body}>
       {props.text}
       {props.children}
-    </p>
+    </span>
   );
 }
 
@@ -134,9 +136,6 @@ export default function Home() {
             link="https://github.com/alexgeethob"
           ></Card>
         </Grid>
-        <p>test</p>
-        <p>{process.env.TEST_EV}</p>
-        <p>{process.env.TESTING_TEST}</p>
       </main>
       <Footer></Footer>
     </div>
