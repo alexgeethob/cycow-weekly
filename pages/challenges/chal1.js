@@ -7,7 +7,7 @@ import app from "/firebase/init.js";
 import { getDatabase, ref } from "firebase/database";
 import { useList } from "react-firebase-hooks/database";
 
-export default function c1() {
+export default function Chal1(props) {
   /*DO NOT USE THIS CODE EVER
   EXTREMELY BAD PRACTICE
   i am simply testing functionality out*/
