@@ -24,7 +24,8 @@ export default function ChalHome() {
         <Section title="How To Do Challenges">
           In these challenges, the goal is usually to find a flag. The flag can
           be obfuscated, hidden, or might even need to be recreated. However,
-          the flag will always be a string.
+          the flag will always be a string. For now, the flag is not case-sensitive, 
+          but this may change in the future
           <Important>
             IMPORTANT NOTE: The flag is always wrapped with{" "}
             <code className={styles.code}>cow{"{}"}</code>

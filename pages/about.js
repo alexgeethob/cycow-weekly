@@ -90,13 +90,14 @@ export default function About() {
           on this site is loaded statically and there isn&apos;t much user
           interaction. Also, do note that this website is currently only built
           for Chrome/Chromium browsers and ideally a 16:9 resolution.
+          For now, flag submission has been added, but it is still a bit buggy.
         </Section>
         <Section
           title="Future Goals"
           text="In the future, I plan to eventually convert everything to typescript
           (currently on js), add user input and verification, add api
           accessibility to get challenges, and maybe eventually add an account
-          system using a backend like Firebase."
+          system using Firebase."
         ></Section>
         <Image
           alt="Picture of cow"
