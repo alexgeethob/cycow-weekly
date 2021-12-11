@@ -2,9 +2,30 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "/styles/Chal.module.css";
 import Link from "next/link";
-import {FlagForm} from "/components/chal_components"; 
+import { FlagForm } from "/components/chal_components";
+import app from "/firebase/init.js";
+import { getDatabase, ref } from "firebase/database";
+import { useList } from "react-firebase-hooks/database";
 
 export default function c1() {
+  /*DO NOT USE THIS CODE EVER
+  EXTREMELY BAD PRACTICE
+  i am simply testing functionality out*/
+  const database = getDatabase(app);
+  const e=ref(database);
+  //console.log('ref ',e);
+  var [snapshots, loading, error] = useList(e);
+  var flag="temp";
+  if (!loading && snapshots) {
+    flag=snapshots[1]._node.value_;
+  }
+  else{
+    return(
+      <h1>Loading...</h1>
+    )
+  }
+
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -42,13 +63,11 @@ export default function c1() {
           encoding.
         </p>
         <code className={styles.code}>
-        -.-. --- .-- --- .--. . -. -... .-.
-         .- -.-. . .-- . .-.. -.-. --- -- .
-          ..--.- - --- ..--.- -.-. -.-- -.-.
-           --- .-- ..--.- .-- . . -.- .-.. -.
-           -- -.-. .-.. --- ... . -... .-. .- -.-. .
+          -.-. --- .-- --- .--. . -. -... .-. .- -.-. . .-- . .-.. -.-. --- -- .
+          ..--.- - --- ..--.- -.-. -.-- -.-. --- .-- ..--.- .-- . . -.- .-.. -.
+          -- -.-. .-.. --- ... . -... .-. .- -.-. .
         </code>
-        <FlagForm></FlagForm> 
+        <FlagForm correct={flag}></FlagForm>
       </main>
       <footer>
         <a href="mailto:alexzhang05@gmail.com">Contact</a>
