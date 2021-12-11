@@ -3,9 +3,6 @@ import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 
-function test(){
-  console.log(process.env.TEST_EV);
-}
 export function Nav() {
   return (
     <nav className={styles.nav}>
@@ -139,6 +136,7 @@ export default function Home() {
         </Grid>
         <p>test</p>
         <p>{process.env.TEST_EV}</p>
+        <p>{process.env.TESTING_TEST}</p>
       </main>
       <Footer></Footer>
     </div>
