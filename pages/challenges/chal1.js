@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "/styles/Chal.module.css";
 import Link from "next/link";
+import {FlagForm} from "/components/chal_components"; 
 
 export default function c1() {
   return (
@@ -41,11 +42,13 @@ export default function c1() {
           encoding.
         </p>
         <code className={styles.code}>
-          -.-. -.-. .-- .-.. . ..-. - -... .-. .- -.-. . .-- ...-- .-.. -.-.
-          ----- -- . ..--.- - ----- ..--.- -.-. -.-- -.... . .-. ..--.- -.-.
-          ----- .-- ..--.- .-- ...-- ...-- -.- .---- -.-- -.-.-- .-. .. --. ....
-          - -... .-. .- -.-. .{" "}
+        -.-. --- .-- --- .--. . -. -... .-.
+         .- -.-. . .-- . .-.. -.-. --- -- .
+          ..--.- - --- ..--.- -.-. -.-- -.-.
+           --- .-- ..--.- .-- . . -.- .-.. -.
+           -- -.-. .-.. --- ... . -... .-. .- -.-. .
         </code>
+        <FlagForm></FlagForm> 
       </main>
       <footer>
         <a href="mailto:alexzhang05@gmail.com">Contact</a>

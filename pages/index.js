@@ -134,6 +134,8 @@ export default function Home() {
             link="https://github.com/alexgeethob"
           ></Card>
         </Grid>
+        <p>test</p>
+        <p>{process.env.TEST_EV}</p>
       </main>
       <Footer></Footer>
     </div>
