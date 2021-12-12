@@ -66,7 +66,7 @@ export default function Chal1(props) {
         </nav>
         <h1 className={styles.title}>Challenge 2: Ten Plus Six</h1>
         <p className={styles.body}>
-          Of course, now that we are in the modern age, data is stored mostly as bits of 1's and 0's.
+          Of course, now that we are in the modern age, data is stored mostly as bits of 1&apos;s and 0&apos;s.
           <br />
           Often, a group of 8 bits will be compressed into one byte. This byte can be represented as a pure number,
           but more than often you will see it represented as a hexadecimal number with 2 digits, as 1 hexadecimal digit
