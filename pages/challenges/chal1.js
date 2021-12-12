@@ -7,7 +7,7 @@ import app from "/firebase/init.js";
 import { getDatabase, ref, onValue } from "firebase/database";
 
 export async function getStaticProps(context) {
-  const i = 1;
+  const i = 2;
   const database = getDatabase(app);
   const dref = ref(database, "/chal" + i + "flag");
   if (i === undefined) {
@@ -19,11 +19,6 @@ export async function getStaticProps(context) {
   onValue(dref, (snapshot) => {
     data = snapshot.val();
   });
-  if (data === null) {
-    return {
-      props: { error: true },
-    };
-  }
   return {
     props: { flag: data, error: false },
   };

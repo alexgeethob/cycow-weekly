@@ -19,11 +19,6 @@ export async function getStaticProps(context) {
   onValue(dref, (snapshot) => {
     data = snapshot.val();
   });
-  if (data === null) {
-    return {
-      props: { error: true },
-    };
-  }
   return {
     props: { flag: data, error: false },
   };
