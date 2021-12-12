@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 import { Nav, Footer, Title } from "/pages/index";
-import {Section, SectionText, SectionTitle} from "/pages/index";
+import {Section} from "/pages/index";
 
 
 export function Important(props) {
@@ -33,16 +32,17 @@ export default function ChalHome() {
           Usually, the text is in the flag is leetspeak, and should be
           humanly-readable. Don&apos;t be afraid to reach out if you are unable
           to solve a challenge or need hints! Also feel free to utilize any tool
-          on the internet to help you!F
+          on the internet to help you!
         </Section>
         <h2 className={styles.subtitle}>Challenge List</h2>
-        <div className={styles.clist}>
-          <ul>
+          <ul className={styles.clist}>
             <li>
               <Link href="/challenges/chal1">Challenge 1: Dots and Dashes</Link>
             </li>
+            <li>
+              <Link href="/challenges/chal2">Challenge 2: Ten Plus Six</Link>
+            </li>
           </ul>
-        </div>
       </main>
       <Footer></Footer>
     </div>

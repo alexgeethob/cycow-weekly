@@ -7,7 +7,7 @@ import Node from "/public/sample/node.png";
 import Code1 from "/public/sample/card.PNG";
 import Code2 from "/public/sample/underline.PNG";
 import { Nav, Footer, Title } from "/pages/index";
-import { Section, SectionText, SectionTitle } from "/pages/index";
+import { Section } from "/pages/index";
 
 export default function About() {
   return (

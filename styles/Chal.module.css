@@ -130,5 +130,6 @@
 }
 
 .submit[type=submit]:hover{
+  cursor: pointer;
   background-color: rgb(41, 110, 57);
 }

@@ -7,7 +7,7 @@ import app from "/firebase/init.js";
 import { getDatabase, ref, onValue } from "firebase/database";
 
 export async function getStaticProps(context) {
-  const i = 1;
+  const i = 2;
   const database = getDatabase(app);
   const dref = ref(database, "/chal" + i + "flag");
   if (i === undefined) {
@@ -39,7 +39,7 @@ export default function Chal1(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Challenge 1: Dots and Dashes</title>
+        <title>Challenge 2: Ten Plus Six</title>
         <meta name="description" content="Not sponsored (yet)" />
         <link rel="icon" href="/o.ico" />
       </Head>
@@ -64,18 +64,19 @@ export default function Chal1(props) {
             </Link>
           </div>
         </nav>
-        <h1 className={styles.title}>Challenge 1: Dots and Dashes</h1>
+        <h1 className={styles.title}>Challenge 2: Ten Plus Six</h1>
         <p className={styles.body}>
-          Even back before computers existed, information was still being
-          encrypted and decrypted.
+          Of course, now that we are in the modern age, data is stored mostly as bits of 1's and 0's.
           <br />
-          See if you can decode the message from this famous form of message
-          encoding.
+          Often, a group of 8 bits will be compressed into one byte. This byte can be represented as a pure number,
+          but more than often you will see it represented as a hexadecimal number with 2 digits, as 1 hexadecimal digit
+          is 4 bits.
+          <br />
+          Also, a common way of storing English text is ASCII, which maps certain numbers in the range 0-255 to a
+          specific character. See if you can decode the flag.
         </p>
         <code className={styles.code}>
-          -.-. --- .-- --- .--. . -. -... .-. .- -.-. . .-- . .-.. -.-. --- -- .
-          ..--.- - --- ..--.- -.-. -.-- -.-. --- .-- ..--.- .-- . . -.- .-..
-          -.-- -.-. .-.. --- ... . -... .-. .- -.-. .
+          63 6f 77 7b 68 33 78 5f 69 73 5f 74 68 33 5f 62 65 73 74 21 7d
         </code>
         <FlagForm correct={flag}></FlagForm>
       </main>

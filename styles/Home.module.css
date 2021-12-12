@@ -166,18 +166,16 @@
   color: #004df3;
 }
 
+.clist li{
+  padding: 0.5rem;
+}
+
 .picGroup {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 1rem;
-}
-
-.pic {
-  display: block;
-  border-radius: 0.3rem;
-  border: 1px red solid;
 }
 
 .important {
