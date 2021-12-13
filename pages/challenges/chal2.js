@@ -3,25 +3,12 @@ import Image from "next/image";
 import styles from "/styles/Chal.module.css";
 import Link from "next/link";
 import { FlagForm } from "/components/chal_components";
-import app from "/firebase/init.js";
-import { getDatabase, ref, onValue } from "firebase/database";
+import {getData} from "/firebase/retrieve";
 
-export async function getStaticProps(context) {
-  const i = 2;
-  const database = getDatabase(app);
-  const dref = ref(database, "/chal" + i + "flag");
-  if (i === undefined) {
-    return {
-      props: { error: true },
-    };
-  }
-  var data = null;
-  onValue(dref, (snapshot) => {
-    data = snapshot.val();
-  });
-  return {
-    props: { flag: data, error: false },
-  };
+
+export async function getServerSideProps(context) {
+  const props = await getData(2);
+  return {props: props};
 }
 
 export default function Chal1(props) {
