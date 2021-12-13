@@ -8,4 +8,5 @@ Check it out [here](https://cycow-weekly.vercel.app/)
 - Make challenges dynamic linking
 - Uploading all challenge data to firebase ^
 - API call to get challenges/challenge data
-
+- Add category tags/difficulty tags to challenges
+- Sort challenges on challenges main page
