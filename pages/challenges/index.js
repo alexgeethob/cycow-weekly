@@ -26,7 +26,7 @@ export default function ChalHome() {
           the flag will always be a string. For now, the flag is not case-sensitive, 
           but this may change in the future
           <Important>
-            IMPORTANT NOTE: The flag is always wrapped with{" "}
+            IMPORTANT NOTE: The flag is always wrapped with
             <code className={styles.code}>cow{"{}"}</code>
           </Important>
           Usually, the text is in the flag is leetspeak, and should be
