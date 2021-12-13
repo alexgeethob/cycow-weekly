@@ -3,11 +3,11 @@ import Image from "next/image";
 import styles from "/styles/Chal.module.css";
 import Link from "next/link";
 import { FlagForm } from "/components/chal_components";
-import {getData} from "/firebase/retrieve";
+import { getData } from "/firebase/retrieve";
 
 export async function getServerSideProps(context) {
   const props = await getData(1);
-  return {props: props};
+  return { props: props };
 }
 
 export default function Chal1(props) {
@@ -55,8 +55,8 @@ export default function Chal1(props) {
         </p>
         <code className={styles.code}>
           -.-. --- .-- --- .--. . -. -... .-. .- -.-. . .-- . .-.. -.-. --- -- .
-          ..--.- - --- ..--.- -.-. -.-- -.-. --- .-- ..--.- .-- . . -.- .-..
-          -.-- -.-. .-.. --- ... . -... .-. .- -.-. .
+          ..--- -.-. -.-- -.-. --- .-- -....- .-- . . -.- .-.. -.-- -.-. .-..
+          --- ... . -... .-. .- -.-. .
         </code>
         <FlagForm correct={flag}></FlagForm>
       </main>
