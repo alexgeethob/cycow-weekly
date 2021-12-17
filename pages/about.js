@@ -55,7 +55,7 @@ export default function About() {
               className={styles.pic}
             ></Image>
           </div>
-          Thankfully, I learned about{" "}
+          I learned about{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -71,23 +71,21 @@ export default function About() {
           <div className={styles.picGroup}>
             <Image
               src={Code1}
-              alt="CSS code for cards on main page"
+              alt="CSS code snippet"
               height={270}
               width={400}
               className={styles.pic}
             ></Image>
             <Image
               src={Code2}
-              alt="CSS code for underline on title"
+              alt="CSS code snippet"
               height={240}
               width={390}
               className={styles.pic}
             ></Image>
           </div>
           <br />
-          However, for now, there is no dynamic content on the site. Everything
-          on this site is loaded statically and there isn&apos;t much user
-          interaction. Also, do note that this website is currently only built
+          Also, do note that this website is currently only built
           for Chrome/Chromium browsers and ideally a 16:9 resolution. For now,
           flag submission has been added, but it is still a bit buggy.
         </Section>
@@ -96,8 +94,10 @@ export default function About() {
           text="In the future, I plan to eventually convert everything to typescript
           (currently on js), add user input and verification, add api
           accessibility to get challenges, and maybe eventually add an account
-          system using Firebase."
-        ></Section>
+          system using Firebase. Find out more "
+        >
+          <a target="_blank"  rel="noopener noreferrer" href="https://github.com/alexgeethob/cycow-weekly">here</a>
+        </Section>
         <Image
           alt="Picture of cow"
           src="/cow.ico"
