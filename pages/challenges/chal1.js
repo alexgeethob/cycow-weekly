@@ -4,6 +4,7 @@ import styles from "/styles/Chal.module.css";
 import Link from "next/link";
 import { FlagForm } from "/components/chal_components";
 import { getData } from "/firebase/retrieve";
+import { Nav, Footer } from "/pages/index";
 
 export async function getServerSideProps(context) {
   const props = await getData(1);
@@ -26,25 +27,7 @@ export default function Chal1(props) {
       </Head>
 
       <main className={styles.main}>
-        <nav className={styles.nav}>
-          <div className={styles.navList}>
-            <Link href="/">
-              <a>
-                Home
-                <Image alt="" src="/home-icon.svg" width={20} height={20} />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <Link href="/guide">
-              <a>Guide</a>
-            </Link>
-            <Link href="/challenges">
-              <a>Challenges</a>
-            </Link>
-          </div>
-        </nav>
+      <Nav></Nav>
         <h1 className={styles.title}>Challenge 1: Dots and Dashes</h1>
         <p className={styles.body}>
           Even back before computers existed, information was still being

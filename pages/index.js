@@ -3,8 +3,6 @@ import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 
-
-
 export function Nav() {
   return (
     <nav className={styles.nav}>
@@ -21,9 +19,22 @@ export function Nav() {
         <Link href="/guide">
           <a>Guide</a>
         </Link>
-        <Link href="/challenges">
-          <a>Challenges</a>
-        </Link>
+        <div className={styles.dropDown}>
+          <Link href="/challenges">
+            <a className={styles.dropDownBtn}>Challenges</a>
+          </Link>
+          <div className={styles.dropDownBox}>
+            <Link href="/challenges/chal1">
+              <a>Challenge 1: Dots and Dashes</a>
+            </Link>
+            <Link href="/challenges/chal2">
+              <a>Challenge 2: Ten Plus Six</a>
+            </Link>
+            <Link href="/challenges">
+              <a>More</a>
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );
@@ -48,7 +59,12 @@ export function Title(props) {
 
 export function Card(props) {
   return (
-    <a href={props.link} className={styles.card} target="_blank" rel="noopener noreferrer">
+    <a
+      href={props.link}
+      className={styles.card}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <h2>{props.name}</h2>
       <p>{props.message}</p>
     </a>
@@ -111,13 +127,13 @@ export default function Home() {
         <Nav></Nav>
         <Grid>
           <LinkCard
-            name="About This Site"
+            name="About This Site &rarr;"
             message="Find out more about this site and how it was created"
             link="/about"
           ></LinkCard>
           <LinkCard
             name="Quick Guide &rarr;"
-            message="Get a quick guide into cybersecurity and a few other basics"
+            message="Get a quick guide into cybersecurity"
             link="/guide"
           ></LinkCard>
           <LinkCard

@@ -1,13 +1,14 @@
 .container {
   min-height: 100vh;
 }
+
 .nav {
   background-color: rgb(255, 222, 38);
   float: left;
   position: sticky;
   width: 100%;
   top: 0%;
-  margin: 1.5rem;
+  margin: 0;
   z-index: 1;
 }
 
@@ -27,6 +28,46 @@
 
 .navList a:hover {
   background-color: rgb(212, 168, 23);
+}
+
+.dropDown{
+  display: block;
+  float: right;
+}
+
+.dropDownBox{
+  position: absolute;
+  top: 3.1rem;
+  padding: 0;
+  margin: 0;
+  display: none;
+  background-color: rgb(255, 234, 118);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  animation: goDown 350ms ease forwards;
+  transform-origin: top center;
+}
+
+.dropDownBox a{
+  padding: 0.4rem;
+  margin: 0.3rem;
+}
+
+.dropDown:hover .dropDownBtn{
+  background-color: rgb(212, 168, 23);
+}
+
+.dropDown:hover .dropDownBox{
+  display: grid;
+}
+
+@keyframes goDown {
+  0% {
+    transform: scaleY(0)
+  }
+  100% {
+    transform: scaleY(1)
+  }
 }
 
 .main {
@@ -116,28 +157,30 @@
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: all 0.6s ease;
-  max-width: 320px;
-  min-height: 10rem;
+  height: 12rem;
+  width: 38.5ch;
+  text-align: center;
 }
 
 .card:hover {
   box-shadow: 0px 10px 6px -5px rgba(0, 0, 0, 0.5);
   color: #004df3;
   border-color: #004df3;
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .card h2 {
-  margin: 1rem;
+  margin: 0.75rem;
   font-size: 2rem;
 }
 
 .card p {
-  margin: 0;
+  margin: 0.25rem;
   font-size: 1.5rem;
   line-height: 1.5;
+  
 }
 
 .logo {
