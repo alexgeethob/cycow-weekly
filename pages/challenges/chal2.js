@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "/styles/Chal.module.css";
-import Link from "next/link";
 import { FlagForm } from "/components/chal_components";
 import {getData} from "/firebase/retrieve";
+import { Nav, Footer } from "/pages/index";
 
 
 export async function getServerSideProps(context) {
@@ -23,29 +22,11 @@ export default function Chal1(props) {
       <Head>
         <title>Challenge 2: Ten Plus Six</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/o.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <nav className={styles.nav}>
-          <div className={styles.navList}>
-            <Link href="/">
-              <a>
-                Home
-                <Image alt="" src="/home-icon.svg" width={20} height={20} />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <Link href="/guide">
-              <a>Guide</a>
-            </Link>
-            <Link href="/challenges">
-              <a>Challenges</a>
-            </Link>
-          </div>
-        </nav>
+      <Nav></Nav>
         <h1 className={styles.title}>Challenge 2: Ten Plus Six</h1>
         <p className={styles.body}>
           Of course, now that we are in the modern age, data is stored mostly as bits of 1&apos;s and 0&apos;s.
@@ -62,9 +43,7 @@ export default function Chal1(props) {
         </code>
         <FlagForm correct={flag}></FlagForm>
       </main>
-      <footer>
-        <a href="mailto:alexzhang05@gmail.com">Contact</a>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }

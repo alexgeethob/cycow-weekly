@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
-import { Nav, Footer, Title } from "/pages/index";
-import { Section, SectionText, SectionTitle } from "/pages/index";
+import { Nav, Footer, Title, Section } from "/components/main_components";
 
 export default function Guide() {
   return (
@@ -11,7 +9,7 @@ export default function Guide() {
       <Head>
         <title>Quick Guide</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/o.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>

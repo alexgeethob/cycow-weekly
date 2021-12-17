@@ -30,12 +30,12 @@
   background-color: rgb(212, 168, 23);
 }
 
-.dropDown{
+.dropDown {
   display: block;
   float: right;
 }
 
-.dropDownBox{
+.dropDownBox {
   position: absolute;
   top: 3.1rem;
   padding: 0;
@@ -48,25 +48,25 @@
   transform-origin: top center;
 }
 
-.dropDownBox a{
+.dropDownBox a {
   padding: 0.4rem;
   margin: 0.3rem;
 }
 
-.dropDown:hover .dropDownBtn{
+.dropDown:hover .dropDownBtn {
   background-color: rgb(212, 168, 23);
 }
 
-.dropDown:hover .dropDownBox{
+.dropDown:hover .dropDownBox {
   display: grid;
 }
 
 @keyframes goDown {
   0% {
-    transform: scaleY(0)
+    transform: scaleY(0);
   }
   100% {
-    transform: scaleY(1)
+    transform: scaleY(1);
   }
 }
 
@@ -180,7 +180,6 @@
   margin: 0.25rem;
   font-size: 1.5rem;
   line-height: 1.5;
-  
 }
 
 .logo {
@@ -209,7 +208,7 @@
   color: #004df3;
 }
 
-.clist li{
+.clist li {
   padding: 0.5rem;
 }
 

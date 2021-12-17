@@ -6,8 +6,7 @@ import Next from "/public/sample/next.png";
 import Node from "/public/sample/node.png";
 import Code1 from "/public/sample/card.PNG";
 import Code2 from "/public/sample/underline.PNG";
-import { Nav, Footer, Title } from "/pages/index";
-import { Section } from "/pages/index";
+import { Nav, Footer, Title, Section } from "/components/main_components";
 
 export default function About() {
   return (
@@ -15,7 +14,7 @@ export default function About() {
       <Head>
         <title>About Us</title>
         <meta name="description" content="Not sponsored (yet)" />
-        <link rel="icon" href="/o.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -89,8 +88,8 @@ export default function About() {
           However, for now, there is no dynamic content on the site. Everything
           on this site is loaded statically and there isn&apos;t much user
           interaction. Also, do note that this website is currently only built
-          for Chrome/Chromium browsers and ideally a 16:9 resolution.
-          For now, flag submission has been added, but it is still a bit buggy.
+          for Chrome/Chromium browsers and ideally a 16:9 resolution. For now,
+          flag submission has been added, but it is still a bit buggy.
         </Section>
         <Section
           title="Future Goals"
