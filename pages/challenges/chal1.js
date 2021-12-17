@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
 import { getData } from "/firebase/retrieve";
-import { Nav, Footer } from "/pages/index";
+import { Nav, Footer } from "/components/main_components";
 
 export async function getServerSideProps(context) {
   const props = await getData(1);
