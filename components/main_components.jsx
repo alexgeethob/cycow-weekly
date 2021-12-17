@@ -20,7 +20,7 @@ export function Nav() {
         </Link>
         <div className={styles.dropDown}>
           <Link href="/challenges">
-            <a className={styles.dropDownBtn}>Challenges</a>
+            <a className={styles.dropDownBtn}>Challenges &#11167;</a>
           </Link>
           <div className={styles.dropDownBox}>
             <Link href="/challenges/chal1">
