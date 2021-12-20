@@ -9,7 +9,7 @@
   width: 100%;
   top: 0%;
   margin: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 .navList {
@@ -38,12 +38,12 @@
 .dropDownBox {
   position: absolute;
   top: 3.1rem;
+  right: 10.4rem;
   padding: 0;
   margin: 0;
   display: none;
   background-color: rgb(255, 234, 118);
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.5);
   animation: goDown 350ms ease forwards;
   transform-origin: top center;
 }
