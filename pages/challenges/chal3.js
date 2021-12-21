@@ -29,7 +29,7 @@ export default function Chal1(props) {
       <Nav></Nav>
         <h1 className={styles.title}>Challenge 3: Stripped Suffix</h1>
         <p className={styles.body}>
-          Almost all of the time, data is stored on computers as files, which are seperated and maintained by the computer's
+          Almost all of the time, data is stored on computers as files, which are seperated and maintained by the computer&apos;s
           operating system.
           <br />
           Files usually contain a small section of data at the beginning called <a className={styles.link} target="_blank" href="https://en.wikipedia.org/wiki/List_of_file_signatures">magic bytes.</a>
