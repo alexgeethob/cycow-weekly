@@ -27,6 +27,7 @@ export default function Chal1(props) {
       <main className={styles.main}>
         <Nav></Nav>
         <h1 className={styles.title}>Challenge 2: Ten Plus Six</h1>
+        <h2 className={styles.category}>Cryptography</h2>
         <p className={styles.body}>
           Of course, now that we are in the modern age, data is stored mostly as
           bits of 1&apos;s and 0&apos;s.

@@ -27,6 +27,7 @@ export default function Chal1(props) {
       <main className={styles.main}>
         <Nav></Nav>
         <h1 className={styles.title}>Challenge 1: Dots and Dashes</h1>
+        <h2 className={styles.category}>Cryptography</h2>
         <p className={styles.body}>
           Even back before computers existed, information was still being
           encrypted and decrypted.

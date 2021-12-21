@@ -27,6 +27,7 @@ export default function Chal1(props) {
       <main className={styles.main}>
         <Nav></Nav>
         <h1 className={styles.title}>Challenge 3: Stripped Suffix</h1>
+        <h2 className={styles.category}>Forensics</h2>
         <p className={styles.body}>
           Almost all of the time, data is stored on computers as files, which
           are seperated and maintained by the computer&apos;s operating system.
