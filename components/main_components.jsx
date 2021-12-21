@@ -29,6 +29,9 @@ export function Nav() {
             <Link href="/challenges/chal2">
               <a>Challenge 2: Ten Plus Six</a>
             </Link>
+            <Link href="/challenges/chal3">
+              <a>Challenge 3: Stripped Suffix</a>
+            </Link>
             <Link href="/challenges">
               <a>More</a>
             </Link>
@@ -41,7 +44,7 @@ export function Nav() {
 
 export function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <a href="mailto:alexzhang05@gmail.com">Contact</a>
     </footer>
   );

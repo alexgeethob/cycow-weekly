@@ -1,19 +1,24 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction:column;
+}
 
-.main {
-  min-height: 80vh;
-  flex: 1;
+
+.main {  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+
 .title {
   margin: 4rem;
   padding: 1rem;
   line-height: 1.15;
   color: black;
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-align: center;
   border-radius: 3.5rem;
   background-image: linear-gradient(135deg, #ee0909, #ec9421);
@@ -29,19 +34,19 @@
   color: transparent;
 }
 
-.body {
+.body {                                 
   max-width: 80ch;
   margin: 1rem;
   padding: 0.5rem;
   line-height: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .code {
   background: #fafafa;
-  border-radius: 5px;
+  border-radius: 0.25rem;
   padding: 1.5rem;
-  margin: 3.5rem;
+  margin: 2.5rem;
   font-size: 1.1rem;
   max-width: 50ch;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -65,7 +70,7 @@
 }
 
 .form{
-  margin: 3.5rem;
+  margin: 2rem;
   padding: 1rem;
 }
 
@@ -103,4 +108,8 @@
 .submit[type=submit]:hover{
   cursor: pointer;
   background-color: rgb(41, 110, 57);
+}
+
+.download, p .link{
+  color: #004df3;
 }
