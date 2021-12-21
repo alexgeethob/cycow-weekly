@@ -1,17 +1,15 @@
 .container {
   min-height: 100vh;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
 
-
-.main {  
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .title {
   margin: 4rem;
@@ -34,7 +32,7 @@
   color: transparent;
 }
 
-.body {                                 
+.body {
   max-width: 80ch;
   margin: 1rem;
   padding: 0.5rem;
@@ -69,18 +67,18 @@
   max-width: 30ch;
 }
 
-.form{
+.form {
   margin: 2rem;
   padding: 1rem;
 }
 
-.input[type=text]{
+.input[type="text"] {
   border-radius: 0.5rem;
   margin: 1rem;
   padding: 1rem;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.03em;
   resize: none;
@@ -89,12 +87,12 @@
   height: 3.5rem;
 }
 
-.submit[type=submit]{
+.submit[type="submit"] {
   background-color: rgb(80, 182, 102);
   margin: 1rem;
   padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   border-radius: 0.5rem;
   border: rgb(68, 151, 86);
@@ -105,11 +103,12 @@
   transition: background-color 0.4s ease;
 }
 
-.submit[type=submit]:hover{
+.submit[type="submit"]:hover {
   cursor: pointer;
   background-color: rgb(41, 110, 57);
 }
 
-.download, p .link{
+.download,
+p .link {
   color: #004df3;
 }

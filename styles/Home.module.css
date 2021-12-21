@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.footer{
+.footer {
   background-color: lightblue;
   position: relative;
   width: 100%;
@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.footer a{
+.footer a {
   font-size: medium;
   font-weight: bold;
   display: flex;
