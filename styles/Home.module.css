@@ -2,14 +2,15 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .footer {
   background-color: lightblue;
-  position: relative;
+  position: absolute;
   width: 100%;
   min-height: 1.5rem;
-  bottom: 0%;
+  bottom: 0;
   padding: 0.75rem 0;
   justify-content: center;
   align-items: center;
@@ -48,7 +49,8 @@
   text-align: center;
 }
 
-.navList a:hover {
+.navList a:hover,
+.navList a:focus {
   background-color: rgb(212, 168, 23);
 }
 
@@ -75,11 +77,13 @@
   margin: 0.3rem;
 }
 
-.dropDown:hover .dropDownBtn {
+.dropDown:hover .dropDownBtn,
+.dropDown:focus .dropDownBtn {
   background-color: rgb(212, 168, 23);
 }
 
-.dropDown:hover .dropDownBox {
+.dropDown:hover .dropDownBox,
+.dropDown:focus .dropDownBox {
   display: grid;
 }
 
@@ -95,6 +99,7 @@
 .main {
   min-height: 80vh;
   padding: 1rem 0;
+  padding-bottom: 3.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -105,7 +110,7 @@
   margin: 1rem;
   padding: 0.5rem;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .title {
@@ -123,7 +128,8 @@
   animation-fill-mode: forwards;
 }
 
-.title:hover {
+.title:hover,
+.title:focus {
   background-size: 100% 5px;
   color: #000000;
   box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
@@ -187,7 +193,8 @@
   text-align: center;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   box-shadow: 0px 10px 6px -5px rgba(0, 0, 0, 0.5);
   color: #004df3;
   border-color: #004df3;

@@ -29,7 +29,7 @@ export class FlagForm extends React.Component {
     }
     this.setState({ isSubmitted: false });
   }
-//{this.state.isSubmitted && <ReactCanvasConfetti></ReactCanvasConfetti>}
+//{this.state.isSubmitted && <ReactCanvasConfetti className={styles.confetti}></ReactCanvasConfetti>}
   render() {
     return (
       <div>

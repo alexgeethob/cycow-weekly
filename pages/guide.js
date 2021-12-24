@@ -60,7 +60,7 @@ export default function Guide() {
           title="Reconnaissance"
           text="Though not an often appearing topic, reconnaissance merely means to gain information via research
         and analysis. However this field can go very far, as shown by various OSINT (open-source intelligence) projects like StackOverflow. 
-        Challenges will mostly consist of finding some information given a clue or context (Warning, this topic can go very very far!)."
+        Challenges will mostly consist of finding some information given a clue or context, then submitting it as the flag."
         ></Section>
         <Section
           title="Web"
