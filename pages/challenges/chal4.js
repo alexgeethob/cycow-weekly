@@ -36,10 +36,10 @@ export default function Chal1(props) {
         <h1 className={styles.title}>Challenge 4: Milk and Cookies</h1>
         <h2 className={styles.category}>Web</h2>
         <p className={styles.body}>
-          When a client requests anything from server, cookies are usually
+          When a client requests anything from a webserver, cookies are usually
           included in that request.
           <br />
-          They are mostly stored client-side, and they help store information
+          Cookies are mostly stored client-side, and they help store information
           that might not be too important or should be temporary, such as
           storing user preferences/keeping a user logged in.
           <br />
