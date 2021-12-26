@@ -44,7 +44,7 @@ export default function ChalHome() {
             <Link href="/challenges/chal3">Challenge 3: Stripped Suffix</Link>
           </li>
           <li>
-            <Link href="/challenges/chal4">Milk and Cookies</Link>
+            <Link href="/challenges/chal4">Challenge 4: Milk and Cookies</Link>
           </li>
         </ul>
       </main>
