@@ -46,6 +46,9 @@ export default function ChalHome() {
           <li>
             <Link href="/challenges/chal4">Challenge 4: Milk and Cookies</Link>
           </li>
+          <li>
+            <Link href="/challenges/chal5">Challenge 5: (Ten Plus Six) Times Four</Link>
+          </li>
         </ul>
       </main>
       <Footer></Footer>
