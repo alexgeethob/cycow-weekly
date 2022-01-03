@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
 import { getData } from "/firebase/retrieve";
-import { Nav, Footer } from "/components/main_components";
+import { Nav, Footer, ExtLink } from "/components/main_components";
 import { setCookies } from "cookies-next";
 
 export async function getServerSideProps(context) {
@@ -45,14 +45,9 @@ export default function Chal1(props) {
           <br />
           There are several ways to access cookies, such as through Browser
           Developer Tools, but a good Chrome extension can be found{" "}
-          <a
-            className={styles.link}
-            rel="noreferrer"
-            target="_blank"
-            href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg"
-          >
+          <ExtLink href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg">
             here.
-          </a>
+          </ExtLink>
           <br />
           Of course, this topic was chosen as Santa always enjoys his milk and
           cookies ;)
@@ -62,7 +57,7 @@ export default function Chal1(props) {
         </code>
         <FlagForm correct={flag}></FlagForm>
       </main>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

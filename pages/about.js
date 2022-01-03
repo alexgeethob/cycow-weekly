@@ -6,7 +6,13 @@ import Next from "/public/sample/next.png";
 import Node from "/public/sample/node.png";
 import Code1 from "/public/sample/card.PNG";
 import Code2 from "/public/sample/underline.PNG";
-import { Nav, Footer, Title, Section } from "/components/main_components";
+import {
+  Nav,
+  Footer,
+  Title,
+  Section,
+  ExtLink,
+} from "/components/main_components";
 
 export default function About() {
   return (
@@ -56,13 +62,7 @@ export default function About() {
             ></Image>
           </div>
           I learned about{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://vercel.com/home"
-          >
-            Vercel&apos;s{" "}
-          </a>
+          <ExtLink href="https://vercel.com/home">Vercel&apos;s </ExtLink>
           NextJS, which runs on NodeJS and React,{" "}
           <span style={{ fontSize: "1px" }}>thanks Akaash</span>
           and managed to use that to create this site that you are currently
@@ -85,9 +85,9 @@ export default function About() {
             ></Image>
           </div>
           <br />
-          Also, do note that this website is currently only built
-          for Chrome/Chromium browsers and ideally a 16:9 resolution. For now,
-          flag submission has been added, but it is still a bit buggy.
+          Also, do note that this website is currently only built for
+          Chrome/Chromium browsers and ideally a 16:9 resolution. For now, flag
+          submission has been added, but it is still a bit buggy.
         </Section>
         <Section
           title="Future Goals"
@@ -96,7 +96,9 @@ export default function About() {
           accessibility to get challenges, and maybe eventually add an account
           system using Firebase. Find out more "
         >
-          <a target="_blank"  rel="noopener noreferrer" href="https://github.com/alexgeethob/cycow-weekly">here</a>
+          <ExtLink href="https://github.com/alexgeethob/cycow-weekly">
+            here
+          </ExtLink>
         </Section>
         <Image
           alt="Picture of cow"

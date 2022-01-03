@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
 import { getData } from "/firebase/retrieve";
-import { Nav, Footer } from "/components/main_components";
+import { Nav, Footer, ExtLink } from "/components/main_components";
 
 export async function getServerSideProps(context) {
   const props = await getData(3);
@@ -33,14 +33,9 @@ export default function Chal1(props) {
           are seperated and maintained by the computer&apos;s operating system.
           <br />
           Files usually contain a small section of data at the beginning called{" "}
-          <a
-            className={styles.link}
-            rel="noreferrer"
-            target="_blank"
-            href="https://en.wikipedia.org/wiki/List_of_file_signatures"
-          >
+          <ExtLink href="https://en.wikipedia.org/wiki/List_of_file_signatures">
             magic bytes.
-          </a>
+          </ExtLink>
           <br />
           These bytes help tell the computer how to interpret and serve these
           files to the user, and are commonly shown to us in the form of file
