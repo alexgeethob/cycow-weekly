@@ -23,7 +23,6 @@ export default function Home() {
           title="Cyber Cow Weekly"
           subtitle="Weekly beginner-friendly cybersecurity challenges!"
         >
-          {" "}
         </Title>
         <Nav></Nav>
         <Grid>
