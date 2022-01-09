@@ -1,23 +1,11 @@
 import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
-import { getData } from "/firebase/retrieve";
 import { Nav, Footer } from "/components/main_components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSmileWink } from "@fortawesome/free-regular-svg-icons";
 
-export async function getServerSideProps(context) {
-  const props = await getData(6);
-  return { props: props };
-}
-
 export default function Chal1(props) {
-  if (props.error === true) {
-    return <h1>Loading...</h1>;
-  }
-
-  const flag = props.flag;
-
   return (
     <div className={styles.container}>
       <Head>
@@ -35,17 +23,17 @@ export default function Chal1(props) {
           interesting.
           <br />
           Sometimes the best way to learn about something is to go out and
-          research for yourself. So for this challenge, you're going to have to
-          look for yourself.
+          research for yourself. So for this challenge, you&apos;re going to
+          have to look for yourself.
           <br />
           Good Luck! <FontAwesomeIcon icon={faSmileWink} />
         </p>
         <code className={styles.code}>
-          What's the CVE for the recent widespread vulnerability that was
+          What&apos;s the CVE for the recent widespread vulnerability that was
           reported in a Java framework in December of 2021? Remember to wrap
           your answer in cow{"{}"}
         </code>
-        <FlagForm correct={flag}></FlagForm>
+        <FlagForm id={6}></FlagForm>
       </main>
       <Footer />
     </div>
