@@ -57,7 +57,7 @@ export default function Chal1(props) {
         <code className={styles.code}>
           Have a merry Christmas (or other holiday) and a Happy New Year!
         </code>
-        <FlagForm correct={flag}></FlagForm>
+        <FlagForm id={4}></FlagForm>
       </main>
       <Footer />
     </div>

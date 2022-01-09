@@ -1,21 +1,9 @@
 import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
-import { getData } from "/firebase/retrieve";
 import { Nav, Footer } from "/components/main_components";
 
-export async function getServerSideProps(context) {
-  const props = await getData(2);
-  return { props: props };
-}
-
 export default function Chal1(props) {
-  if (props.error === true) {
-    return <h1>Loading...</h1>;
-  }
-
-  const flag = props.flag;
-
   return (
     <div className={styles.container}>
       <Head>
@@ -44,7 +32,7 @@ export default function Chal1(props) {
         <code className={styles.code}>
           63 6f 77 7b 68 33 78 5f 69 73 5f 74 68 33 5f 62 65 73 74 21 7d
         </code>
-        <FlagForm correct={flag}></FlagForm>
+        <FlagForm id={2}></FlagForm>
       </main>
       <Footer></Footer>
     </div>
