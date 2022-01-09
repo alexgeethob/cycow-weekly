@@ -17,7 +17,7 @@ export function Nav() {
           </a>
         </Link>
         <Link href="/about">
-          <a className={styles.navItem}> About</a>
+          <a className={styles.navItem}>About</a>
         </Link>
         <Link href="/guide">
           <a className={styles.navItem}>Guide</a>

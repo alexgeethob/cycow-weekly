@@ -4,6 +4,8 @@ import { FlagForm } from "/components/chal_components";
 import { getData } from "/firebase/retrieve";
 import { Nav, Footer, ExtLink } from "/components/main_components";
 import { setCookies } from "cookies-next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSmileWink } from "@fortawesome/free-regular-svg-icons";
 
 export async function getServerSideProps(context) {
   const props = await getData(4);
@@ -50,7 +52,7 @@ export default function Chal1(props) {
           </ExtLink>
           <br />
           Of course, this topic was chosen as Santa always enjoys his milk and
-          cookies ;)
+          cookies <FontAwesomeIcon icon={faSmileWink} />
         </p>
         <code className={styles.code}>
           Have a merry Christmas (or other holiday) and a Happy New Year!
