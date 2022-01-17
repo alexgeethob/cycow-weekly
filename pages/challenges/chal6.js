@@ -5,7 +5,7 @@ import { Nav, Footer } from "/components/main_components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSmileWink } from "@fortawesome/free-regular-svg-icons";
 
-export default function Chal1(props) {
+export default function Chal6(props) {
   return (
     <div className={styles.container}>
       <Head>

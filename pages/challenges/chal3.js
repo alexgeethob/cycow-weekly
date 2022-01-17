@@ -3,7 +3,7 @@ import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
 import { Nav, Footer, ExtLink } from "/components/main_components";
 
-export default function Chal1(props) {
+export default function Chal3(props) {
   return (
     <div className={styles.container}>
       <Head>

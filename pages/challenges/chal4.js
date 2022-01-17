@@ -12,7 +12,7 @@ export async function getServerSideProps(context) {
   return { props: props };
 }
 
-export default function Chal1(props) {
+export default function Chal4(props) {
   if (props.error === true) {
     return <h1>Loading...</h1>;
   }
