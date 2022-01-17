@@ -45,7 +45,7 @@
 }
 
 .code {
-  background: #fafafa;
+  background: var(--code);
   border-radius: 0.25rem;
   line-height: 1.5rem;
   padding: 1.5rem;
@@ -61,20 +61,15 @@
   margin-left: 0.5rem;
 }
 
-.info {
-  border-radius: 0.4rem 0.6rem 0.4rem 0.6rem;
-  border: rgb(180, 180, 180);
-  border-width: 3px;
-  background-image: linear-gradient(60deg, #808080, #e2e2e2);
-  border-style: solid;
-  margin: 1.5rem;
-  padding: 0.8rem;
-  max-width: 30ch;
-}
-
 .form {
   margin: 2rem;
   padding: 1rem;
+}
+
+.submit {
+  --button-bg: rgb(80, 182, 102);
+  --button-border: rgb(68, 151, 86);
+  --button-hover: rgb(53, 124, 70);
 }
 
 .input[type="text"] {
@@ -93,14 +88,14 @@
 }
 
 .submit[type="submit"] {
-  background-color: rgb(80, 182, 102);
+  background-color: var(--button-bg);
   margin: 1rem;
   padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   border-radius: 0.5rem;
-  border: rgb(68, 151, 86);
+  border: var(--button-border);
   font-weight: bold;
   letter-spacing: 0.03em;
   width: 12ch;
@@ -108,11 +103,13 @@
   transition: background-color 0.4s ease;
 }
 
-.submit[type="submit"]:hover {
+.submit[type="submit"]:hover,
+.submit[type="submit"]:focus {
   cursor: pointer;
-  background-color: rgb(53, 124, 70);
+  background-color: var(--button-hover);
+  border: var(--button-hover);
 }
 
 .download {
-  color: #004df3;
+  color: var(--link);
 }
