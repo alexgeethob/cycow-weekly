@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import { getDatabase } from "firebase/database";
 
 const creds = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -9,7 +8,6 @@ const creds = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
-
 
 const app = initializeApp(creds);
 export default app;

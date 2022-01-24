@@ -10,7 +10,7 @@ import {
 } from "/components/main_components";
 import { Important } from "./challenges/index";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
