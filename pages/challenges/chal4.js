@@ -7,7 +7,7 @@ import { setCookies } from "cookies-next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSmileWink } from "@fortawesome/free-regular-svg-icons";
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const props = await getData(4);
   return { props: props };
 }
