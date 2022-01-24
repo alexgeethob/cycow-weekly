@@ -8,6 +8,7 @@ import {
   LinkCard,
   Grid,
 } from "/components/main_components";
+import { Important } from "./challenges/index";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
         >
         </Title>
         <Nav></Nav>
+        <Important>
+            NO CHALLENGE THIS WEEK DUE TO BUSY, SORRY
+          </Important>
         <Grid>
           <LinkCard
             name="About This Site &rarr;"
