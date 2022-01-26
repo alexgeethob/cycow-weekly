@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApp } from "firebase/app";
 
 const creds = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -9,5 +9,10 @@ const creds = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(creds);
+let app;
+try {
+  app = getApp();
+} catch {
+  app = initializeApp(creds);
+}
 export default app;

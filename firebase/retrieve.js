@@ -1,20 +1,21 @@
 import app from "/firebase/init.js";
 import { getDatabase, ref, get } from "firebase/database";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { getFirestore, collection, doc, getDoc, getDocs } from "firebase/firestore";
 
+const fireapp = app;
 /*
-Retrieves actual data from database
+Retrieves flag for challenge from database based on id
 */
-export async function getData(i) {
-  const database = getDatabase(app);
-  const dref = ref(database, "/chal" + i + "flag");
+export async function getFlag(i) {
+  const db = getDatabase(fireapp);
+  const dref = ref(db, "/chal" + i + "flag");
   if (i === undefined) {
     return {
       flag: null,
       error: true,
     };
   }
-  var data = null;
+  let data = null;
   const snapshot = await get(dref);
   data = snapshot.val();
   return {
@@ -23,16 +24,28 @@ export async function getData(i) {
   };
 }
 
-export async function test() {
-  const db = getFirestore(app);
-  const docRef = doc(db, "chal-info", "test");
+/*
+Retrieves challenge info from db based on id
+*/
+export async function getInfo(i) {
+  const db = getFirestore(fireapp);
+  const docRef = doc(db, "chal-info", "chal" + i + "info");
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
+    //json object
     const data = docSnap.data();
-    console.log(data.hello);
-  } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
+    return {
+      data: data,
+      error: null,
+    };
   }
-  return false;
+  //doc does not exist
+  return {
+    data: null,
+    error: true,
+  };
 }
+
+/*
+  Retrieves all challenge info
+*/

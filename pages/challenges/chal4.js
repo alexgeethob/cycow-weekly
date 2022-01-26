@@ -1,14 +1,14 @@
 import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
-import { getData } from "/firebase/retrieve";
+import { getFlag } from "/firebase/retrieve";
 import { Nav, Footer, ExtLink } from "/components/main_components";
 import { setCookies } from "cookies-next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSmileWink } from "@fortawesome/free-regular-svg-icons";
 
 export async function getStaticProps(context) {
-  const props = await getData(4);
+  const props = await getFlag(4);
   return { props: props };
 }
 
