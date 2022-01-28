@@ -3,6 +3,18 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
+export function ExtLink(props){
+  return (
+    <a
+    className={styles.link}
+    rel="noreferrer"
+    target="_blank"
+    href={props.href}
+  >
+    {props.children}
+  </a>
+  );
+}
 export function Nav() {
   return (
     <nav className={styles.nav}>
