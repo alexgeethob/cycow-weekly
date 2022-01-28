@@ -2,7 +2,7 @@
 import React from "react";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import styles from "/styles/Chal.module.css";
-import { getData, test } from "/firebase/retrieve";
+import { getFlag } from "/firebase/retrieve";
 
 
 export class FlagForm extends React.Component {
@@ -22,9 +22,8 @@ export class FlagForm extends React.Component {
   async handleSubmit(event) {
     this.setState({ isSubmitted: true });
     event.preventDefault();
-    await test();
     if (this.correct === "") {
-      const data = await getData(this.id);
+      const data = await getFlag(this.id);
       if (data.error) {
         alert("Something went wrong, please try again");
         return;

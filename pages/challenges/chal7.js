@@ -15,12 +15,12 @@ export default function Chal7(props) {
       <main className={styles.main}>
         <Nav></Nav>
         <h1 className={styles.title}>Challenge 7: Slithering Snake</h1>
-        <h2 className={styles.category}>Forensics</h2>
+        <h2 className={styles.category}>Reverse Engineering</h2>
         <p className={styles.body}>
           Python is a interpreted programming language that has a very beginner
           friendly syntax and is easy to learn. It is commonly used as a
           scripting language or for machine learning and AI.
-          <br />
+          <br /> 
           If you aren&apos;t too familiar with it, you can learn more about it{" "}
           <ExtLink href="https://en.wikipedia.org/wiki/Python_(programming_language)">
             here.

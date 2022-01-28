@@ -114,15 +114,4 @@ export function SectionText(props) {
   );
 }
 
-export function ExtLink(props) {
-  return (
-    <a
-      className={styles.link}
-      rel="noreferrer"
-      target="_blank"
-      href={props.href}
-    >
-      {props.children}
-    </a>
-  );
-}
+

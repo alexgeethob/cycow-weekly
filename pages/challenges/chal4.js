@@ -19,7 +19,6 @@ export default function Chal4(props) {
 
   const flag = props.flag;
   setCookies("Secret", flag, {
-    path: "/challenges/chal4",
     encode: function (a) {
       return a;
     },
@@ -47,9 +46,9 @@ export default function Chal4(props) {
           <br />
           There are several ways to access cookies, such as through Browser
           Developer Tools, but a good Chrome extension can be found{" "}
-          <ExtLink href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg">
+          <a href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg">
             here.
-          </ExtLink>
+          </a>
           <br />
           Of course, this topic was chosen as Santa always enjoys his milk and
           cookies <FontAwesomeIcon icon={faSmileWink} />
