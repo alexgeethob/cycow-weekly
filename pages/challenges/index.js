@@ -35,25 +35,25 @@ export default function ChalHome() {
         <h2 className={styles.subtitle}>Challenge List</h2>
         <ul className={styles.clist}>
           <li>
-            <Link href="/challenges/chal1">Challenge 1: Dots and Dashes</Link>
+            <Link href="/challenges/1">Challenge 1: Dots and Dashes</Link>
           </li>
           <li>
-            <Link href="/challenges/chal2">Challenge 2: Ten Plus Six</Link>
+            <Link href="/challenges/2">Challenge 2: Ten Plus Six</Link>
           </li>
           <li>
-            <Link href="/challenges/chal3">Challenge 3: Stripped Suffix</Link>
+            <Link href="/challenges/3">Challenge 3: Stripped Suffix</Link>
           </li>
           <li>
-            <Link href="/challenges/chal4">Challenge 4: Milk and Cookies</Link>
+            <Link href="/challenges/4">Challenge 4: Milk and Cookies</Link>
           </li>
           <li>
-            <Link href="/challenges/chal5">Challenge 5: (Ten Plus Six) Times Four</Link>
+            <Link href="/challenges/5">Challenge 5: (Ten Plus Six) Times Four</Link>
           </li>
           <li>
-            <Link href="/challenges/chal6">Challenge 6: Logging Lookup</Link>
+            <Link href="/challenges/6">Challenge 6: Logging Lookup</Link>
           </li>
           <li>
-            <Link href="/challenges/chal7">Challenge 7: Slithering Snake</Link>
+            <Link href="/challenges/7">Challenge 7: Slithering Snake</Link>
           </li>
         </ul>
       </main>

@@ -3,18 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-export function ExtLink(props){
-  return (
-    <a
-    className={styles.link}
-    rel="noreferrer"
-    target="_blank"
-    href={props.href}
-  >
-    {props.children}
-  </a>
-  );
-}
+
 export function Nav() {
   return (
     <nav className={styles.nav}>
@@ -39,13 +28,13 @@ export function Nav() {
             <a className={styles.dropDownBtn}>Challenges &#11167;</a>
           </Link>
           <div className={styles.dropDownBox}>
-            <Link href="/challenges/chal1">
+            <Link href="/challenges/1">
               <a>Challenge 1: Dots and Dashes</a>
             </Link>
-            <Link href="/challenges/chal2">
+            <Link href="/challenges/2">
               <a>Challenge 2: Ten Plus Six</a>
             </Link>
-            <Link href="/challenges/chal3">
+            <Link href="/challenges/3">
               <a>Challenge 3: Stripped Suffix</a>
             </Link>
             <Link href="/challenges">
@@ -72,6 +61,19 @@ export function Title(props) {
       <h1 className={styles.title}>{props.title}</h1>
       <p className={styles.description}>{props.subtitle}</p>
     </header>
+  );
+}
+
+export function ExtLink(props){
+  return (
+    <a
+    className={styles.link}
+    rel="noreferrer"
+    target="_blank"
+    href={props.href}
+  >
+    {props.children}
+  </a>
   );
 }
 
