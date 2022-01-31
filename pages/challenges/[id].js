@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "/styles/Chal.module.css";
 import { FlagForm } from "/components/chal_components";
 import { Nav, Footer } from "/components/main_components";
-import { getInfo, getInfo } from "/firebase/retrieve";
+import { getInfo, getFlag } from "/firebase/retrieve";
 import { setCookies } from "cookies-next";
 import InterweaveWrapper from "/components/interweave_wrapper";
 
