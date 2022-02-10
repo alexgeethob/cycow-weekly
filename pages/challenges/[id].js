@@ -6,9 +6,13 @@ import { getInfo, getFlag } from "/firebase/retrieve";
 import { setCookies } from "cookies-next";
 import InterweaveWrapper from "/components/interweave_wrapper";
 
+const totalChallenges = 8;
 export async function getStaticProps(context) {
   const params = { context }.context.params;
   const id = parseInt(params.id);
+  if (id < 1 || id > totalChallenges) {
+    return { props: { error: true, msg: "Invalid Challenge ID" } };
+  }
   let props = await getInfo(id);
   if (props.error) return { props: { error: true } };
   props.data.id = id;
@@ -28,12 +32,34 @@ export async function getStaticPaths() {
       { params: { id: "5" } },
       { params: { id: "6" } },
       { params: { id: "7" } },
+      { params: { id: "8" } },
     ],
     fallback: true,
   };
 }
 
 export default function ChalPage(props) {
+  if (props.error) {
+    return (
+      <div className={styles.container}>
+        <Head>
+          <title>Invalid Request</title>
+          <meta name="description" content="Not sponsored (yet)" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main className={styles.main}>
+          <Nav></Nav>
+          <h1 className={styles.category}>
+            An error occurred during your request.
+          </h1>
+          <p className={styles.code}>
+            {props.msg ?? "Contact an administrator"}
+          </p>
+        </main>
+        <Footer></Footer>
+      </div>
+    );
+  }
   if (props.id === 4) {
     setCookies("Secret", props.flag, {
       path: "/challenges/4",
