@@ -5,8 +5,6 @@ Check it out [here](https://cycow-weekly.vercel.app/)
 # TODO List
 - Make flag verification look nicer
 - Add going between challenges (left/right)
-- Make challenges dynamic linking
-- Uploading all challenge data to firebase ^
-- API call to get challenges/challenge data
-- Add category tags/difficulty tags to challenges
+- Add difficulty tags to challenges
 - Sort challenges on challenges main page
+- Search function
