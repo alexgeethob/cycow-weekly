@@ -26,9 +26,6 @@ export default function Home(props) {
         >
         </Title>
         <Nav></Nav>
-        <Important>
-            NO CHALLENGE THIS WEEK DUE TO BUSY, SORRY
-          </Important>
         <Grid>
           <LinkCard
             name="About This Site &rarr;"

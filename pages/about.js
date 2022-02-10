@@ -63,8 +63,7 @@ export default function About() {
           </div>
           I learned about{" "}
           <ExtLink href="https://vercel.com/home">Vercel&apos;s </ExtLink>
-          NextJS, which runs on NodeJS and React,{" "}
-          <span style={{ fontSize: "1px" }}>thanks Akaash</span>
+          NextJS, which runs on NodeJS and React,
           and managed to use that to create this site that you are currently
           viewing.
           <br />

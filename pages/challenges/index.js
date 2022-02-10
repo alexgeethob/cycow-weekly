@@ -55,6 +55,9 @@ export default function ChalHome() {
           <li>
             <Link href="/challenges/7">Challenge 7: Slithering Snake</Link>
           </li>
+          <li>
+            <Link href="/challenges/8">Challenge 8: Hidden in Plain Site</Link>
+          </li>
         </ul>
       </main>
       <Footer></Footer>
