@@ -62,55 +62,6 @@
   margin-left: 0.5rem;
 }
 
-.form {
-  margin: 2rem;
-  padding: 1rem;
-}
-
-.submit {
-  --button-bg: rgb(80, 182, 102);
-  --button-border: rgb(68, 151, 86);
-  --button-hover: rgb(53, 124, 70);
-}
-
-.input[type="text"] {
-  border-radius: 0.5rem;
-  margin: 1rem;
-  padding: 1rem;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
-  resize: none;
-  overflow: hidden;
-  width: 55ch;
-  height: 3.5rem;
-}
-
-.submit[type="submit"] {
-  background-color: var(--button-bg);
-  margin: 1rem;
-  padding: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
-  border-radius: 0.5rem;
-  border: var(--button-border);
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  width: 12ch;
-  height: 3.5rem;
-  transition: background-color 0.4s ease;
-}
-
-.submit[type="submit"]:hover,
-.submit[type="submit"]:focus {
-  cursor: pointer;
-  background-color: var(--button-hover);
-  border: var(--button-hover);
-}
-
 .download {
   color: var(--link);
 }
