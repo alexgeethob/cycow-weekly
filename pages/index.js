@@ -8,7 +8,7 @@ import {
   LinkCard,
   Grid,
 } from "/components/main_components";
-import { Important } from "./challenges/index";
+import {Important} from "/pages/challenges/index"
 
 export default function Home(props) {
   return (
@@ -26,6 +26,9 @@ export default function Home(props) {
         >
         </Title>
         <Nav></Nav>
+        <Important>
+          Bug when traveling between challenge pages, please refresh every time you go to a new challenge page.
+        </Important>
         <Grid>
           <LinkCard
             name="About This Site &rarr;"

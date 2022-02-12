@@ -7,6 +7,7 @@ import { setCookies } from "cookies-next";
 import InterweaveWrapper from "/components/interweave_wrapper";
 
 const totalChallenges = 8;
+var lastId = 0;
 export async function getStaticProps(context) {
   const params = { context }.context.params;
   const id = parseInt(params.id);
@@ -16,6 +17,7 @@ export async function getStaticProps(context) {
   let props = await getInfo(id);
   if (props.error) return { props: { error: true } };
   props.data.id = id;
+  lastId = id;
   if (id === 4) {
     const flag = await getFlag(id);
     props.data.flag = flag.flag;
@@ -89,7 +91,7 @@ export default function ChalPage(props) {
         <code className={styles.code}>
           <InterweaveWrapper content={props.code} />
         </code>
-        <FlagForm id={props.id}></FlagForm>
+        <FlagForm id={props.id} lastId={lastId}></FlagForm>
       </main>
       <Footer></Footer>
     </div>
