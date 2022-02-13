@@ -17,17 +17,21 @@ export function FlagForm(props) {
   const [flag, setFlag] = useState("");
   const id = props.id;
 
-  useEffect(() => {
-    async function get(){
-      const temp = await getFlag(id);
-      return temp;
-    }
-    const data = get();
+  async function fetchFlag(id) {
+    const data = await getFlag(id);
     if (data.error) {
       alert("Something went wrong, please refresh");
-      return;
+    } else {
+      setFlag(data.flag);
     }
-    setFlag(data.flag);
+  }
+
+  useEffect(() => {
+    fetchFlag(id);
+  }, []);
+
+  useEffect(() => {
+    fetchFlag(id);
     setValue("");
   }, [id]);
 
@@ -38,6 +42,7 @@ export function FlagForm(props) {
   function handleSubmit(event) {
     event.preventDefault();
     setSubmitted(true);
+    
     if (value.toLowerCase().trim() === flag) {
       setResult(1);
       setTimeout(() => {
