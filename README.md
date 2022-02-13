@@ -3,8 +3,7 @@ This is a small site created to help introduce cybersecurity and provide beginne
 Check it out [here](https://cycow-weekly.vercel.app/)
 
 # Currently Known Bugs/Issues
-- Going directly to from challenge to another bugs out the flag submission to only accept flag from old challenge
-    - Dynamic routing issue
+- Flag Submission not working
 
 # TODO List
 - Add going between challenges on challenge pages (left/right)

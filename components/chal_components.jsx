@@ -38,7 +38,7 @@ export function FlagForm(props) {
   function handleSubmit(event) {
     event.preventDefault();
     setSubmitted(true);
-    if (value.trim() === flag) {
+    if (value.toLowerCase().trim() === flag) {
       setResult(1);
       setTimeout(() => {
         setResult(0);
