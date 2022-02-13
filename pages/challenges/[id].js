@@ -43,7 +43,7 @@ export default function ChalPage(props) {
   const [id, setID] = useState(props.id);
   useEffect(() => {
     setID(props.id);
-  }, [id]);
+  }, [props.id]);
 
   if (props.error) {
     return (

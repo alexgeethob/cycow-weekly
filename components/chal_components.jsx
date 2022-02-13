@@ -17,8 +17,12 @@ export function FlagForm(props) {
   const [flag, setFlag] = useState("");
   const id = props.id;
 
-  useEffect(async () => {
-    const data = await getFlag(id);
+  useEffect(() => {
+    async function get(){
+      const temp = await getFlag(id);
+      return temp;
+    }
+    const data = get();
     if (data.error) {
       alert("Something went wrong, please refresh");
       return;
@@ -47,7 +51,7 @@ export function FlagForm(props) {
     }
     setSubmitted(false);
   }
-  
+
   var resultBox;
   if (result == 1) {
     resultBox = <Correct />;
