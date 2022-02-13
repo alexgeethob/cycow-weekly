@@ -26,9 +26,6 @@ export default function Home(props) {
         >
         </Title>
         <Nav></Nav>
-        <Important>
-          Bug when traveling between challenge pages, please refresh every time you go to a new challenge page.
-        </Important>
         <Grid>
           <LinkCard
             name="About This Site &rarr;"
