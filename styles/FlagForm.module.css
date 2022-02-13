@@ -76,7 +76,7 @@
   text-align: left;
   background-color: rgb(255, 80, 80);
   opacity: 0;
-  animation: fadeInOut 4s ease-in-out;
+  animation: fadeInOut 3s ease-in-out;
 }
 
 .correct {
@@ -91,5 +91,5 @@
   text-align: left;
   background-color: rgb(68, 151, 86);
   opacity: 0;
-  animation: fadeInOut 4s ease-in-out;
+  animation: fadeInOut 3s ease-in-out;
 }

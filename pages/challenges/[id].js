@@ -5,9 +5,9 @@ import { Nav, Footer } from "/components/main_components";
 import { getInfo, getFlag } from "/firebase/retrieve";
 import { setCookies } from "cookies-next";
 import InterweaveWrapper from "/components/interweave_wrapper";
+import { useState, useEffect } from "react";
 
 const totalChallenges = 8;
-var lastId = 0;
 export async function getStaticProps(context) {
   const params = { context }.context.params;
   const id = parseInt(params.id);
@@ -17,7 +17,6 @@ export async function getStaticProps(context) {
   let props = await getInfo(id);
   if (props.error) return { props: { error: true } };
   props.data.id = id;
-  lastId = id;
   if (id === 4) {
     const flag = await getFlag(id);
     props.data.flag = flag.flag;
@@ -41,6 +40,11 @@ export async function getStaticPaths() {
 }
 
 export default function ChalPage(props) {
+  const [id, setID] = useState(props.id);
+  useEffect(() => {
+    setID(props.id);
+  }, [id]);
+
   if (props.error) {
     return (
       <div className={styles.container}>
@@ -62,7 +66,7 @@ export default function ChalPage(props) {
       </div>
     );
   }
-  if (props.id === 4) {
+  if (id === 4) {
     setCookies("Secret", props.flag, {
       path: "/challenges/4",
       encode: function (a) {
@@ -74,7 +78,7 @@ export default function ChalPage(props) {
     <div className={styles.container}>
       <Head>
         <title>
-          Challenge {props.id}: {props.title}
+          Challenge {id}: {props.title}
         </title>
         <meta name="description" content="Not sponsored (yet)" />
         <link rel="icon" href="/favicon.ico" />
@@ -82,7 +86,7 @@ export default function ChalPage(props) {
       <main className={styles.main}>
         <Nav></Nav>
         <h1 className={styles.title}>
-          Challenge {props.id}: {props.title}
+          Challenge {id}: {props.title}
         </h1>
         <h2 className={styles.category}>{props.category}</h2>
         <p className={styles.body}>
@@ -91,7 +95,7 @@ export default function ChalPage(props) {
         <code className={styles.code}>
           <InterweaveWrapper content={props.code} />
         </code>
-        <FlagForm id={props.id} lastId={lastId}></FlagForm>
+        <FlagForm id={id}></FlagForm>
       </main>
       <Footer></Footer>
     </div>
