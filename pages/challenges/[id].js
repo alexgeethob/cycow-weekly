@@ -5,9 +5,8 @@ import { Nav, Footer } from "/components/main_components";
 import { getInfo, getFlag } from "/firebase/retrieve";
 import { setCookies } from "cookies-next";
 import InterweaveWrapper from "/components/interweave_wrapper";
-import { useState, useEffect } from "react";
 
-const totalChallenges = 8;
+const totalChallenges = 9;
 export async function getStaticProps(context) {
   const params = { context }.context.params;
   const id = parseInt(params.id);
@@ -34,6 +33,7 @@ export async function getStaticPaths() {
       { params: { id: "6" } },
       { params: { id: "7" } },
       { params: { id: "8" } },
+      { params: { id: "9" } },
     ],
     fallback: true,
   };
