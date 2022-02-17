@@ -1,8 +1,7 @@
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-
+import { faHouse, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 export function Nav() {
   return (
@@ -25,7 +24,13 @@ export function Nav() {
         </Link>
         <div className={styles.dropDown}>
           <Link href="/challenges">
-            <a className={styles.dropDownBtn}>Challenges &#11167;</a>
+            <a className={styles.dropDownBtn}>
+              Challenges{" "}
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                style={{ margin: "auto", marginLeft: "0.3rem" }}
+              />
+            </a>
           </Link>
           <div className={styles.dropDownBox}>
             <Link href="/challenges/1">
@@ -64,16 +69,16 @@ export function Title(props) {
   );
 }
 
-export function ExtLink(props){
+export function ExtLink(props) {
   return (
     <a
-    className={styles.link}
-    rel="noreferrer"
-    target="_blank"
-    href={props.href}
-  >
-    {props.children}
-  </a>
+      className={styles.link}
+      rel="noreferrer"
+      target="_blank"
+      href={props.href}
+    >
+      {props.children}
+    </a>
   );
 }
 
@@ -127,5 +132,3 @@ export function SectionText(props) {
     </span>
   );
 }
-
-
