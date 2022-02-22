@@ -1,5 +1,5 @@
 This is a small site created to help introduce cybersecurity and provide beginner-friendly cybersecurity challenges.
-
+Current number of challenges: 10
 Check it out [here](https://cycow-weekly.vercel.app/)
 
 # Currently Known Bugs/Issues
