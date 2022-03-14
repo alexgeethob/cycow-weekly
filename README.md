@@ -3,9 +3,10 @@ Current number of challenges: 10
 Check it out [here](https://cycow-weekly.vercel.app/)
 
 # Currently Known Bugs/Issues
-- Flag Submission not working
+
 
 # TODO List
+- Fix the submission wrong/right popup
 - Add going between challenges on challenge pages (left/right)
 - Add difficulty tags to challenges
 - Sort challenges on challenges main page

@@ -6,7 +6,7 @@ import { getInfo, getFlag } from "/firebase/retrieve";
 import { setCookies } from "cookies-next";
 import InterweaveWrapper from "/components/interweave_wrapper";
 
-const totalChallenges = 10;
+const totalChallenges = 11;
 export async function getStaticProps(context) {
   const params = { context }.context.params;
   const id = parseInt(params.id);
@@ -35,6 +35,7 @@ export async function getStaticPaths() {
       { params: { id: "8" } },
       { params: { id: "9" } },
       { params: { id: "10" } },
+      { params: { id: "11" } },
     ],
     fallback: true,
   };
