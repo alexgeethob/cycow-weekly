@@ -1,11 +1,9 @@
 import app from "/firebase/init.js";
 import { getDatabase, ref, get } from "firebase/database";
-import { getFirestore, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { getFirestore, doc, getDoc} from "firebase/firestore";
 
 const fireapp = app;
-/*
-Retrieves flag for challenge from database based on id
-*/
+
 export async function getFlag(i) {
   const db = getDatabase(fireapp);
   const dref = ref(db, "/chal" + i + "flag");
@@ -24,28 +22,21 @@ export async function getFlag(i) {
   };
 }
 
-/*
-Retrieves challenge info from db based on id
-*/
+
 export async function getInfo(i) {
   const db = getFirestore(fireapp);
   const docRef = doc(db, "chal-info", "chal" + i + "info");
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
-    //json object
     const data = docSnap.data();
     return {
       data: data,
       error: null,
     };
   }
-  //doc does not exist
+
   return {
     data: null,
     error: true,
   };
 }
-
-/*
-  Retrieves all challenge info
-*/
