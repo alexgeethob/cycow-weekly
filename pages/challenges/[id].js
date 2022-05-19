@@ -13,7 +13,7 @@ export async function getStaticProps(context) {
   if (id < 1 || id > totalChallenges) {
     return { props: { error: true, msg: "Invalid Challenge ID" } };
   }
-  let props = await getInfo(id);
+  const props = await getInfo(id);
   if (props.error) return { props: { error: true } };
   props.data.id = id;
   if (id === 4) {
@@ -22,6 +22,7 @@ export async function getStaticProps(context) {
   }
   return { props: props.data };
 }
+
 export async function getStaticPaths() {
   return {
     paths: [
