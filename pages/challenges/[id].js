@@ -44,6 +44,7 @@ export async function getStaticPaths() {
 }
 
 export default function ChalPage(props) {
+  const [result, setResult] = useState(0);
 
   if (props.error) {
     return (
@@ -74,7 +75,7 @@ export default function ChalPage(props) {
       },
     });
   }
-  const [result, setResult] = useState(0);
+
   const form = (<FlagForm id={props.id} setResult={setResult}></FlagForm>);
   var resultBox;
   if (result == 1) {
