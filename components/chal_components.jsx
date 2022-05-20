@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
-import ReactCanvasConfetti from "react-canvas-confetti";
+//import ReactCanvasConfetti from "react-canvas-confetti";
 import styles from "/styles/FlagForm.module.css";
 import { getFlag } from "/firebase/retrieve";
 
-function Incorrect(props) {
+export function Incorrect(props) {
   return <div className={styles.incorrect}>Try Again.</div>;
 }
-function Correct(props) {
+export function Correct(props) {
   return <div className={styles.correct}>Correct!</div>;
+}
+export function Unanswered(props) {
+  return <div className={styles.unanswered}>Unanswered.</div>;
 }
 
 export function FlagForm(props) {
-  const [result, setResult] = useState(0);
+  const setResult = props.setResult;
   const [submitted, setSubmitted] = useState(false);
   const [value, setValue] = useState("");
   const [flag, setFlag] = useState("");
@@ -42,7 +45,7 @@ export function FlagForm(props) {
   function handleSubmit(event) {
     event.preventDefault();
     setSubmitted(true);
-    
+
     if (value.toLowerCase().trim() === flag) {
       setResult(1);
       setTimeout(() => {
@@ -57,14 +60,6 @@ export function FlagForm(props) {
     setSubmitted(false);
   }
 
-  var resultBox;
-  if (result == 1) {
-    resultBox = <Correct />;
-  } else if (result == -1) {
-    resultBox = <Incorrect />;
-  } else {
-    resultBox = null;
-  }
   //{this.state.isSubmitted && <ReactCanvasConfetti className={styles.confetti}></ReactCanvasConfetti>}
   return (
     <div>
@@ -82,7 +77,6 @@ export function FlagForm(props) {
           Submit
         </button>
       </form>
-      {resultBox}
     </div>
   );
 }

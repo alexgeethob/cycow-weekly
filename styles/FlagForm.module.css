@@ -52,44 +52,57 @@
     transform: translateY(-60%);
     opacity: 0;
   }
+
   40% {
     transform: translateY(0);
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
 
 .incorrect {
-  display: block;
-  position: absolute;
-  top: 2.5rem;
-  right: 0;
+  position: sticky;
+  top: 2.7rem;
   font-size: 1.25rem;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   z-index: 3;
   width: 25rem;
-  text-align: left;
+  text-align: center;
   background-color: rgb(255, 80, 80);
   opacity: 0;
   animation: fadeInOut 3s ease-in-out;
 }
 
 .correct {
-  display: block;
-  position: absolute;
-  top: 2.5rem;
-  right: 0;
+  position: sticky;
+  top: 2.7rem;
   font-size: 1.25rem;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   z-index: 3;
   width: 25rem;
-  text-align: left;
+  text-align: center;
   background-color: rgb(68, 151, 86);
   opacity: 0;
   animation: fadeInOut 3s ease-in-out;
+}
+
+.unanswered {
+  position: sticky;
+  top: 2.4rem;
+  font-size: 1.25rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 3;
+  width: 25rem;
+  text-align: center;
+  opacity: 0;
 }

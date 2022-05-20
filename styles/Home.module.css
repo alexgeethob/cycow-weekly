@@ -1,4 +1,3 @@
-
 .container {
   min-height: 100vh;
   display: flex;
@@ -99,6 +98,7 @@
   0% {
     transform: scaleY(0);
   }
+
   100% {
     transform: scaleY(1);
   }
@@ -253,6 +253,6 @@
   color: red;
 }
 
-.link{
+.link {
   color: var(--link);
 }

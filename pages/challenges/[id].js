@@ -1,6 +1,7 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "/styles/Chal.module.css";
-import { FlagForm } from "/components/chal_components";
+import { FlagForm, Incorrect, Correct, Unanswered } from "/components/chal_components";
 import { Nav, Footer } from "/components/main_components";
 import { getInfo, getFlag } from "/firebase/retrieve";
 import { setCookies } from "cookies-next";
@@ -43,6 +44,7 @@ export async function getStaticPaths() {
 }
 
 export default function ChalPage(props) {
+
   if (props.error) {
     return (
       <div className={styles.container}>
@@ -72,6 +74,18 @@ export default function ChalPage(props) {
       },
     });
   }
+  const [result, setResult] = useState(0);
+  const form = (<FlagForm id={props.id} setResult={setResult}></FlagForm>);
+  var resultBox;
+  if (result == 1) {
+    resultBox = (<Correct></Correct>);
+  }
+  else if (result == -1) {
+    resultBox = (<Incorrect></Incorrect>);
+  }
+  else {
+    resultBox = (<Unanswered></Unanswered>);
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -83,6 +97,7 @@ export default function ChalPage(props) {
       </Head>
       <main className={styles.main}>
         <Nav></Nav>
+        {resultBox}
         <h1 className={styles.title}>
           Challenge {props.id}: {props.title}
         </h1>
@@ -93,7 +108,7 @@ export default function ChalPage(props) {
         <code className={styles.code}>
           <InterweaveWrapper content={props.code} />
         </code>
-        <FlagForm id={props.id}></FlagForm>
+        {form}
       </main>
       <Footer></Footer>
     </div>
