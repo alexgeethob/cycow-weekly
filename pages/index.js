@@ -8,7 +8,7 @@ import {
   LinkCard,
   Grid,
 } from "/components/main_components";
-import {Important} from "/pages/challenges/index"
+import { Important } from "/pages/challenges/index"
 
 export default function Home(props) {
   return (
@@ -45,12 +45,12 @@ export default function Home(props) {
           <Card
             name="Source Code &rarr;"
             message="This website is fully uploaded online"
-            link="https://github.com/alexgeethob/cycow-weekly"
+            link="https://github.com/flocto/cycow-weekly"
           ></Card>
           <Card
             name="Other Projects &rarr;"
             message="Some of my other projects"
-            link="https://github.com/alexgeethob"
+            link="https://github.com/flocto"
           ></Card>
         </Grid>
       </main>

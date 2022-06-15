@@ -26,78 +26,33 @@ export default function About() {
       <main className={styles.main}>
         <Title title="About"> </Title>
         <Nav></Nav>
-        <Section title="Overall Goal">
-          <Link href="/" className="link">
-            Cyber Cow Weekly
-          </Link>{" "}
-          was created to help teach and guide newer students to cybersecurity.
-          Every week, new cybersecurity challenges are released for students to
-          solve. These challenges may include topics such as cryptography,
-          forensics, reverse engineering, website vulnerablities, and so on.{" "}
-          <br />
-          Click{" "}
-          <Link href="/challenges" className="link">
-            here
-          </Link>{" "}
-          to find out more about the challenges <br />
-          Originally, CCW was planned to be a one-time CTF, but both design and
-          infrastructure were a huge problem. There was nowhere to host the
-          challenges, and online services like CTFd cost too much for me.
+        <Section title="Intro"
+          text="This site was meant to be an introduction to cybersecurity through CTF style challenges. It is not sponsored by any organization,
+        and was created by me individually in my free time. Currently, the available challenges can be found ">
+          <Link href="/challenges">here.</Link>
         </Section>
-        <Section title="Current Compromises">
-          <div className={styles.picGroup}>
-            <Image
-              src={Next}
-              alt="NextJS logo"
-              className={styles.pic}
-              height={120}
-              width={200}
-            ></Image>
-            <Image
-              src={Node}
-              alt="NodeJS logo"
-              height={120}
-              width={200}
-              className={styles.pic}
-            ></Image>
-          </div>
-          I learned about{" "}
-          <ExtLink href="https://vercel.com/home">Vercel&apos;s </ExtLink>
-          NextJS, which runs on NodeJS and React,
-          and managed to use that to create this site that you are currently
-          viewing.
-          <br />
-          <div className={styles.picGroup}>
-            <Image
-              src={Code1}
-              alt="CSS code snippet"
-              height={270}
-              width={400}
-              className={styles.pic}
-            ></Image>
-            <Image
-              src={Code2}
-              alt="CSS code snippet"
-              height={240}
-              width={390}
-              className={styles.pic}
-            ></Image>
-          </div>
-          <br />
-          Also, do note that this website is currently only built for
-          Chrome/Chromium browsers and ideally a 16:9 resolution. For now, flag
-          submission has been added, but it is still a bit buggy.
+        <Section title="About"
+          text="This site was my first experience into web dev, and I started work on it when I wasn't even too confident in my own cybersecurity skills.
+          However, it was still a really good learning experience. Of course, I do have some regrets starting with a fullstack JS framework before I even 
+          had a basic understanding of web apps as a whole, but I'm glad I got to experience blindly learning not only React, but also about SSR, DBs, and more."
+        ></Section>
+        <Section title=""
+          text="Making these challenges also improved my cybersecurity foundations, though I don't really believe that they are too 'beginner friendly'. If you are really
+          looking for somewhere to start learning, PicoCTF/Primer is a great place to start. Still, these challenges are based on a lot of concepts that I learned
+          through my own cybersecurity experiences, and I hope that at least someone learns something new or refreshes their already learned concepts through these challenges."
+        ></Section>
+        <Section
+          title="Hiatus"
+          text="However, I don't plan on adding any more challenges for the time being. While I may return to this site, for now, it will remain as is.
+          In fact, the site itself contains some serious security issues, but I'm willing to leave them for anyone else to find. Maybe in the future, when I feel more invested
+          in the project, I'll add more challenges. (Most likely, I will just create an entirely new site though.)"
+        >
         </Section>
         <Section
-          title="Future Goals"
-          text="In the future, I plan to eventually convert everything to typescript
-          (currently on js), add user input and verification, add api
-          accessibility to get challenges, and maybe eventually add an account
-          system using Firebase. Find out more "
+          title="More"
+          text="If you're interested in any of my other projects, you can find them on my Github "
         >
-          <ExtLink href="https://github.com/alexgeethob/cycow-weekly">
-            here
-          </ExtLink>
+          <ExtLink href="https://github.com/flocto">here.</ExtLink>
         </Section>
         <Image
           alt="Picture of cow"
