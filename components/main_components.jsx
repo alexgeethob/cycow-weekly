@@ -55,7 +55,7 @@ export function Nav() {
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <a href="mailto:alexzhang05@gmail.com">Contact</a>
+      <a href="mailto:flocto@duck.com">Contact</a>
     </footer>
   );
 }
